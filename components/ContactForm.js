@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import axios from "axios";
 
 function ContactForm({ setMessage }) {

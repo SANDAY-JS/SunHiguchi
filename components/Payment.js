@@ -1,6 +1,5 @@
 import React from "react";
 import PaymentItem from "./PaymentItem";
-import Image from "next/image";
 
 function Payment() {
   return (
