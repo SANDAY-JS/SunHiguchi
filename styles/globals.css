@@ -7,8 +7,12 @@
     @apply m-0 p-0 box-border;
   }
 
+  #__next {
+    @apply overflow-x-hidden;
+  }
+
   body {
-    @apply bg-[#eee] overflow-x-hidden;
+    @apply bg-[#eee] w-full overflow-x-hidden;
   }
 
   section {
