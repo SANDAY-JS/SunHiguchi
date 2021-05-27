@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Voice from "../components/Voice";
-import Payment from "../components/payment";
+import Payment from "../components/Payment";
 import Contact from "../components/Contact";
 import TopDesign from "../components/TopDesign";
 import Layout from "../components/Layout";
