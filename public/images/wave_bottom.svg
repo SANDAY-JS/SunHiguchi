@@ -1,0 +1,11 @@
+<svg
+  viewBox="0 0 500 145"
+  width="100%"
+  height="100%"
+  preserveAspectRatio="xMinYMin meet"
+>
+  <path
+    d="M0,40 C100,120 200,-50 500,60 V0 L00,0 Z"
+    style="stroke: none"
+  ></path>
+</svg>
