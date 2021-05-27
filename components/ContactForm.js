@@ -44,7 +44,7 @@ function ContactForm({ setMessage }) {
   return (
     <form
       onSubmit={(e) => handleOnSubmit(e)}
-      action={process.env.FORMSPREE__ACTION}
+      action={"https://formspree.io/f/xzbyevqk"}
       method="POST"
       className="text-[#fafafa] w-3/4 sm:w-auto sm:col-span-4"
     >
