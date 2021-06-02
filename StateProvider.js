@@ -81,10 +81,10 @@ export default function StateProvider({ children }) {
       link: "https://clone-bc279.web.app/",
     },
     {
-      title: "Todo App",
+      title: "Movie App",
       language: "React.js",
-      src: "/images/react-todo-app.png",
-      link: "https://sanday-js.github.io/react-todo-app/",
+      src: "/images/mcu-movie-checker.jpg",
+      link: "https://mcu-movie-checker.vercel.app/",
     },
     {
       title: "Hulu Clone",
