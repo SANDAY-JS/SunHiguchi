@@ -39,6 +39,16 @@ function Payment() {
           payment2Des={""}
           num={false}
         />
+        <PaymentItem
+          title={"アニメーション制作"}
+          matter1={"30秒～60秒"}
+          payment1={"29,000"}
+          payment1Des={""}
+          matter2={"30秒まで"}
+          payment2={"19, 000"}
+          payment2Des={""}
+          num={false}
+        />
       </div>
     </section>
   );
