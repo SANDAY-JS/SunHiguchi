@@ -11,7 +11,7 @@ function Payment() {
           title={"Web制作"}
           matter1={"Web制作一式（レスポンシブ化込み）"}
           payment1={"39, 000"}
-          payment1Des={"（通常料金：¥9,000 + レスポンシブ化：¥3,000）"}
+          payment1Des={"（通常料金：¥29,000 + レスポンシブ化：¥10,000）"}
           matter2={"ヘッダー、フッターのみ"}
           payment2={"19, 000"}
           payment2Des={"（ヘッダー：¥10,000 + フッター：¥9,000）"}
@@ -29,9 +29,7 @@ function Payment() {
         />
         <PaymentItem
           title={"WordPress制作"}
-          matter1={
-            "サイト構築一式（WordPressインストールからコーディングまで）"
-          }
+          matter1={"サイト構築一式"}
           payment1={"39, 000"}
           payment1Des={""}
           matter2={"一部コーディングのみ"}
@@ -39,7 +37,7 @@ function Payment() {
           payment2Des={""}
           num={false}
         />
-        <PaymentItem
+        {/* <PaymentItem
           title={"アニメーション制作"}
           matter1={"30秒～60秒"}
           payment1={"29,000"}
@@ -48,7 +46,7 @@ function Payment() {
           payment2={"19, 000"}
           payment2Des={""}
           num={false}
-        />
+        /> */}
       </div>
     </section>
   );
