@@ -10,10 +10,10 @@ function Payment() {
         <PaymentItem
           title={"Web制作"}
           matter1={"Web制作一式（レスポンシブ化込み）"}
-          payment1={"39, 000"}
+          payment1={"49, 000"}
           payment1Des={"（通常料金：¥29,000 + レスポンシブ化：¥10,000）"}
-          matter2={"LP制作"}
-          payment2={"39, 000"}
+          matter2={"LP制作(レスポンシブ化込み)"}
+          payment2={"49, 000"}
           payment2Des={"＊デザインがある場合"}
           num={false}
         />
