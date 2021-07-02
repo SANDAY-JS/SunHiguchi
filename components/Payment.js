@@ -9,12 +9,12 @@ function Payment() {
       <div className="flex flex-col items-center z-10">
         <PaymentItem
           title={"Web制作"}
-          matter1={"Web制作一式（レスポンシブ化込み）"}
-          payment1={"49, 000"}
-          payment1Des={"（通常料金：¥29,000 + レスポンシブ化：¥10,000）"}
+          matter1={"Webページ一式（レスポンシブ化込み）"}
+          payment1={"69, 000"}
+          payment1Des={"（通常料金：¥59,000 + レスポンシブ化：¥10,000）"}
           matter2={"LP制作(レスポンシブ化込み)"}
           payment2={"49, 000"}
-          payment2Des={"＊デザインがある場合"}
+          payment2Des={"＊参考サイト・デザインがある場合"}
           num={false}
         />
         <PaymentItem
@@ -30,10 +30,10 @@ function Payment() {
         <PaymentItem
           title={"WordPress制作"}
           matter1={"サイト構築一式"}
-          payment1={"49, 000"}
+          payment1={"69, 000"}
           payment1Des={""}
           matter2={"一部コーディングのみ"}
-          payment2={"29,000"}
+          payment2={"39,000"}
           payment2Des={""}
           num={false}
         />
