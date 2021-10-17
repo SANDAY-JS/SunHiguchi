@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
 import { DiCss3Full, DiSass } from "react-icons/di";
-import { SiTailwindcss, SiNextDotJs } from "react-icons/si";
+import { SiTailwindcss, SiNextDotJs, SiTypescript } from "react-icons/si";
 import { MenuListProvider } from "../StateProvider";
 import {
   IoLogoJavascript,
@@ -54,6 +54,7 @@ function About() {
     <IoLogoJavascript className={svgStyle} />,
     <IoLogoReact className={svgStyle} />,
     <SiNextDotJs className={svgStyle} />,
+    <SiTypescript className={svgStyle} />,
     <IoLogoFirebase className={svgStyle} />,
     <IoLogoWordpress className={svgStyle} />,
     <BiGitMerge className={svgStyle} />,
