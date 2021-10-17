@@ -69,6 +69,7 @@ export default function StateProvider({ children }) {
     "JavaScript",
     "React.js",
     "Next.js",
+    "TypeScript",
     "Firebase",
     "WordPress",
     "Git",
