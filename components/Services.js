@@ -7,7 +7,7 @@ function Services() {
 
   return (
     <section>
-      <h2 id="to_supports">Services</h2>
+      <h2 id="to_services">Services</h2>
       <p>対応内容</p>
       <div className="flex flex-col items-center">
         {servicesList.map((service, i) => (
@@ -15,6 +15,7 @@ function Services() {
             title={service.title}
             src={service.src}
             des={service.des}
+            anim={i === 1 && true}
             num={i}
             key={i}
           />

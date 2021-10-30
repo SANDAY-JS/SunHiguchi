@@ -2,11 +2,16 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { MenuListProvider } from "../StateProvider";
+import gsap, { Elastic } from "gsap";
 
-function ServiceItem({ title, src, des, num }) {
+function ServiceItem({ title, src, des, anim, num }) {
   const { elementEffect, servicesList } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
   const elRef = useRef();
+  const animParentRef = useRef();
+
+  const tl = gsap.timeline({});
+  const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -18,24 +23,51 @@ function ServiceItem({ title, src, des, num }) {
       );
   }, []);
 
+  useEffect(() => {
+    if (!elRef.current || !animParentRef.current) return;
+    const q = gsap.utils.selector(elRef);
+
+    tl.set(q("#letter"), { y: "1.2em" })
+      .addLabel("text-start", "+=.5")
+      .to(
+        q("#letter"),
+        { y: 0, stagger: 0.07, ease: letterAnimEasing },
+        "text-start"
+      );
+  }, [visible]);
+
   return (
     <div
       ref={elRef}
       className={`flex flex-col sm:flex-row justify-between items-center flex-wrap mb-10 
       transition-all duration-500 relative  ${
-        num === 1 ? "left-invisible" : "-left-invisible"
+        num % 2 === 0 ? "-left-invisible" : "left-invisible"
       } ${visible && "!left-0"}`}
     >
       <div
         className={`relative w-full sm:w-1/2 flex flex-wrap justify-center mb-5 ${
-          num === 1 && "sm:order-1"
+          num % 2 !== 0 && "sm:order-1"
         }`}
       >
         <h4
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
          z-10 text-3xl lg:text-4xl text-[#e43f5a] font-extrabold text-center whitespace-nowrap"
         >
-          {title}
+          {!anim
+            ? title
+            : title
+                .replace(/\s/g, `\u00A0`)
+                .split("")
+                .map((letter, i) => (
+                  <span
+                    ref={animParentRef}
+                    className="inline-block"
+                    id="letter"
+                    key={i}
+                  >
+                    {letter}
+                  </span>
+                ))}
         </h4>
         <Image
           width={540}

@@ -56,7 +56,7 @@ export default function StateProvider({ children }) {
   const menuList = [
     "About",
     "Projects",
-    "Supports",
+    "Services",
     "Voice",
     "Payment",
     "Contact",
@@ -96,19 +96,24 @@ export default function StateProvider({ children }) {
   ];
   const servicesList = [
     {
+      title: "Web開発",
+      src: "/images/web-development.jpg",
+      des: "Web上のシステム開発を承っております。ReactやNext.js, TypeScriptなどフロントエンドの業務範囲を専門としておりますが、Firebase等を用いたバックエンドの業務も対応可能です。",
+    },
+    {
+      title: "アニメーション制作",
+      src: "/images/animation.jpg",
+      des: "アニメーション制作も承っております。gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
+    },
+    {
+      title: "WordPress関連案件",
+      src: "/images/wordpress-development.jpg",
+      des: "Wordpressの案件も受け付けております。デザインのカスタマイズから開発の案件まで対応致します。私自身WordPressサイトを運営しておりますので、ぜひお気軽にご相談ください。",
+    },
+    {
       title: "Web制作",
       src: "/images/web-production.jpg",
       des: "ユーザビリティを意識したWebサイトを制作させていただきます。コーディングからCMS導入までお受けしております。ただコードを書くだけでなく、SEO対策や読みやすさを意識したコーディングを致します。スマートフォンサイトの制作もお任せください。",
-    },
-    {
-      title: "Web開発",
-      src: "/images/web-development.jpg",
-      des: "Web開発も対応させて頂きます。JavaScriptだけでなく、ReactなどのフレームワークやFirebaseなどを利用した案件も受け付けております。",
-    },
-    {
-      title: "WordPress制作",
-      src: "/images/wordpress-development.jpg",
-      des: "Wordpressの案件も受け付けております。カスタマイズからコーディングのみの案件まで対応致します。テーマを使用した案件も得意としておりますので、ぜひお気軽にご相談ください。",
     },
   ];
   const voiceList = [

@@ -59,15 +59,19 @@ function PaymentItem({
               <span className="block text-xs sm:text-base">{payment1Des}</span>
             </td>
           </tr>
-          <tr>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
-              {matter2}
-            </td>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
-              ¥{payment2}～
-              <span className="block text-xs sm:text-base">{payment2Des}</span>
-            </td>
-          </tr>
+          {matter2 && (
+            <tr>
+              <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+                {matter2}
+              </td>
+              <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+                ¥{payment2}～
+                <span className="block text-xs sm:text-base">
+                  {payment2Des}
+                </span>
+              </td>
+            </tr>
+          )}
           <tr>
             <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
               その他のご依頼（柔軟に対応致します）

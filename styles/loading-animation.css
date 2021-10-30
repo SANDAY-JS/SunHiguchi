@@ -1,3 +1,5 @@
+/* ローディング時のアニメ―ション */
+
 @-webkit-keyframes logoShowDown {
   30% {
     opacity: 0;
