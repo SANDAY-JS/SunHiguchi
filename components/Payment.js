@@ -8,45 +8,38 @@ function Payment() {
       <p>料金</p>
       <div className="flex flex-col items-center z-10">
         <PaymentItem
-          title={"Web制作"}
-          matter1={"Webページ一式（レスポンシブ化込み）"}
-          payment1={"69, 000"}
-          payment1Des={"（通常料金：¥59,000 + レスポンシブ化：¥10,000）"}
-          matter2={"LP制作(レスポンシブ化込み)"}
-          payment2={"49, 000"}
-          payment2Des={"＊参考サイト・デザインがある場合"}
-          num={false}
-        />
-        <PaymentItem
           title={"Web開発"}
-          matter1={"JavaScript案件(React可能)"}
-          matter2={"Firebase案件"}
+          matter1={"フロントエンド開発"}
           payment1={"39,000"}
           payment1Des={""}
-          payment2={"39,000"}
+          num={true}
+        />
+        <PaymentItem
+          title={"アニメーション制作"}
+          matter1={"動画制作"}
+          payment1={"29,000"}
+          payment1Des={"＊～30秒の場合。長さによって料金が前後いたします。"}
+          matter2={"サイト内のアニメーション再現"}
+          payment2={"19, 000"}
           payment2Des={""}
           num={true}
         />
         <PaymentItem
-          title={"WordPress制作"}
-          matter1={"サイト構築一式"}
-          payment1={"69, 000"}
+          title={"WordPress関連"}
+          matter1={"デザイン, フロントエンド開発"}
+          payment1={"39, 000"}
           payment1Des={""}
-          matter2={"一部コーディングのみ"}
-          payment2={"39,000"}
-          payment2Des={""}
           num={false}
         />
-        {/* <PaymentItem
-          title={"アニメーション制作"}
-          matter1={"30秒～60秒"}
-          payment1={"29,000"}
-          payment1Des={""}
-          matter2={"30秒まで"}
-          payment2={"19, 000"}
-          payment2Des={""}
+        <PaymentItem
+          title={"Web制作"}
+          matter1={"Webページ / LP制作"}
+          payment1={"69, 000"}
+          payment1Des={
+            "（通常料金：¥59,000 + レスポンシブ化：¥10,000）＊参考サイト・デザインをご提示ください"
+          }
           num={false}
-        /> */}
+        />
       </div>
     </section>
   );

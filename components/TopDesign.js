@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import WaveSvg from "../public/images/wave_top.svg";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import { FiArrowUpCircle } from "react-icons/fi";
