@@ -22,14 +22,14 @@ function Payment() {
           matter2={"サイト内のアニメーション再現"}
           payment2={"19, 000"}
           payment2Des={""}
-          num={true}
+          num={false}
         />
         <PaymentItem
           title={"WordPress関連"}
           matter1={"デザイン, フロントエンド開発"}
           payment1={"39, 000"}
           payment1Des={""}
-          num={false}
+          num={true}
         />
         <PaymentItem
           title={"Web制作"}
