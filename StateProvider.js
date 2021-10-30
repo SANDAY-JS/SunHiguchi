@@ -106,7 +106,7 @@ export default function StateProvider({ children }) {
       des: "アニメーション制作も承っております。gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
     },
     {
-      title: "WordPress制作・開発",
+      title: "WordPress関連案件",
       src: "/images/wordpress-development.jpg",
       des: "Wordpressの案件も受け付けております。デザインのカスタマイズから開発の案件まで対応致します。私自身WordPressサイトを運営しておりますので、ぜひお気軽にご相談ください。",
     },
