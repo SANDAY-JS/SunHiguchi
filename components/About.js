@@ -45,7 +45,7 @@ function About() {
   };
 
   const svgStyle =
-    "text-7xl text-[#e43f5a] transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-360";
+    "text-7xl xl:text-8xl text-[#e43f5a] transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-360";
   const svgList = [
     <AiFillHtml5 className={svgStyle} />,
     <DiCss3Full className={svgStyle} />,
@@ -67,11 +67,11 @@ function About() {
       </h2>
       <div
         ref={elRef1}
-        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible ${
-          visible && "!left-0"
+        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible xl:max-w-screen-xl xl:transform xl:-translate-x-1/2 ${
+          visible && "!left-0 xl:!left-1/2"
         }`}
       >
-        <p>
+        <p className="xl:leading-relaxed">
           ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb開発、Web制作活動を行っています、樋口賛と申します。
           <br />
           <br />
@@ -87,14 +87,16 @@ function About() {
           visible && "!left-0"
         } `}
       >
-        <h3 className="text-[#162447] text-center text-2xl">My Skills</h3>
-        <ul className="flex flex-wrap justify-between mt-4 md:px-6 md:w-1/2">
+        <h3 className="text-[#162447] text-center text-2xl xl:text-3xl">
+          My Skills
+        </h3>
+        <ul className="flex flex-wrap justify-between mt-4 md:px-6 md:w-1/2 xl:max-w-screen-xl">
           {mySkillsList.map((mySkill, i) => (
             <li
               className="group w-1/3 md:w-1/5 flex flex-col items-center mt-2"
               key={i}
             >
-              <span className="text-[#162447] z-10 transform duration-500 group-hover:scale-125">
+              <span className="xl:text-xl text-[#162447] z-10 transform duration-500 group-hover:scale-125">
                 {mySkill}
               </span>
               {svgList[i]}
