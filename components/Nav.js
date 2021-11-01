@@ -29,7 +29,7 @@ function Nav() {
     <header>
       <nav
         className={`fixed left-0 z-50 container duration-300 max-w-full ${
-          isMenuActive ? "top-3 " : "-top-10"
+          isMenuActive ? "top-3 2xl:top-6" : "-top-10"
         }`}
       >
         <ul className={`flex justify-evenly items-center flex-wrap h-12`}>
