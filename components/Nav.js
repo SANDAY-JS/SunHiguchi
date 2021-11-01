@@ -35,7 +35,7 @@ function Nav() {
         <ul className={`flex justify-evenly items-center flex-wrap h-12`}>
           {menuList.map((menu, i) => (
             <li
-              className={`cursor-pointer transition-colors duration-300 font-black
+              className={`cursor-pointer transition-colors duration-300 font-black md:text-xl lg:text-xl 2xl:text-3xl
                  hover:text-[#673ab7] ${
                    menuColor ? "text-mainP" : "text-[#ddd]"
                  }

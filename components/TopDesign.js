@@ -16,9 +16,13 @@ function TopDesign() {
     flex flex-col justify-center items-center w-full h-screen"
         id="top"
       >
-        <h1 className={`text-3xl ${topTextStyles}`}>Sun Higuchi</h1>
+        <h1
+          className={`text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl ${topTextStyles}`}
+        >
+          Sun Higuchi
+        </h1>
         <p
-          className={`absolute top-1/2 mt-5 font-sans text-sm ${topTextStyles}`}
+          className={`absolute top-1/2 mt-5 lg:mt-7 2xl:mt-10 font-sans text-sm md:text-base lg:text-xl xl:text-xl 2xl:text-3xl ${topTextStyles}`}
         >
           Front-end developer
         </p>
