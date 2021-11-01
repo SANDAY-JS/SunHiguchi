@@ -9,7 +9,7 @@ function Services() {
     <section>
       <h2 id="to_services">Services</h2>
       <p>対応内容</p>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center xl:max-w-screen-xl xl:mx-auto">
         {servicesList.map((service, i) => (
           <ServiceItem
             title={service.title}

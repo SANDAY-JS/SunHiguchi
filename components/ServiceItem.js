@@ -13,7 +13,16 @@ function ServiceItem({ title, src, des, anim, num }) {
   const tl = gsap.timeline({});
   const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
 
+  const adjustButtonFilterHeight = () => {
+    const textRef = document.getElementById("buttonText");
+    const filterRef = document.getElementById("buttonFilter");
+
+    filterRef.style.width = `${textRef.clientWidth}px`;
+  };
+
   useEffect(() => {
+    adjustButtonFilterHeight();
+
     window.addEventListener("scroll", () =>
       elementEffect(elRef.current, visible, setVisible)
     );
@@ -39,7 +48,7 @@ function ServiceItem({ title, src, des, anim, num }) {
   return (
     <div
       ref={elRef}
-      className={`flex flex-col sm:flex-row justify-between items-center flex-wrap mb-10 
+      className={`flex flex-col sm:flex-row justify-between items-center flex-wrap xl:w-full mb-10 
       transition-all duration-500 relative  ${
         num % 2 === 0 ? "-left-invisible" : "left-invisible"
       } ${visible && "!left-0"}`}
@@ -79,19 +88,21 @@ function ServiceItem({ title, src, des, anim, num }) {
       </div>
 
       <div className="flex flex-col items-center w-full max-w-lg h-full sm:w-1/2 px-5">
-        <p className="max-w-md">{des}</p>
+        <p className="max-w-md leading-tight xl:leading-normal">{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
           smooth={true}
           offset={-70}
           duration={500}
-          className="group relative w-32 h-8 cursor-pointer bg-mainP mt-4 font-jp"
+          className="group relative w-full h-8 cursor-pointer bg-mainP mt-4 font-jp"
+          id="buttonFilter"
         >
           <span
             className="absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 z-10
-               flex justify-center items-center translate-all duration-300 w-full h-full
-               border-2 border-solid border-mainB text-[#162447] "
+               flex justify-center items-center translate-all duration-300 w-max h-full
+               border-2 border-solid border-mainB lg:text-lg xl:text-xl 2xl:text-2xl text-[#162447]"
+            id="buttonText"
           >
             料金を確認する
           </span>
