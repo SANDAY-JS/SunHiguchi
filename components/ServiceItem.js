@@ -13,16 +13,7 @@ function ServiceItem({ title, src, des, anim, num }) {
   const tl = gsap.timeline({});
   const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
 
-  const adjustButtonFilterWidth = () => {
-    const textRef = document.getElementById("buttonText");
-    const filterRef = document.getElementById("buttonFilter");
-
-    return (filterRef.style.width = `${textRef.clientWidth}px`);
-  };
-
   useEffect(() => {
-    // adjustButtonFilterWidth();
-
     window.addEventListener("scroll", () =>
       elementEffect(elRef.current, visible, setVisible)
     );
@@ -96,13 +87,11 @@ function ServiceItem({ title, src, des, anim, num }) {
           offset={-70}
           duration={500}
           className="group cursor-pointer bg-mainP mt-4 font-jp"
-          id="buttonFilter"
         >
           <span
             className="transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0
                flex justify-center items-center duration-300 w-max h-full z-10
                border-2 border-solid border-mainB lg:text-lg xl:text-xl 2xl:text-2xl text-[#162447]"
-            id="buttonText"
           >
             料金を確認する
           </span>
