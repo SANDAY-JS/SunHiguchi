@@ -67,7 +67,7 @@ function About() {
       </h2>
       <div
         ref={elRef1}
-        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible xl:max-w-screen-xl xl:transform xl:-translate-x-1/2 ${
+        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible xl:max-w-screen-lg 2xl:max-w-screen-xl xl:transform xl:-translate-x-1/2 ${
           visible && "!left-0 xl:!left-1/2"
         }`}
       >

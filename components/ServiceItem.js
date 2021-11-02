@@ -13,15 +13,15 @@ function ServiceItem({ title, src, des, anim, num }) {
   const tl = gsap.timeline({});
   const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
 
-  const adjustButtonFilterHeight = () => {
+  const adjustButtonFilterWidth = () => {
     const textRef = document.getElementById("buttonText");
     const filterRef = document.getElementById("buttonFilter");
 
-    filterRef.style.width = `${textRef.clientWidth}px`;
+    return (filterRef.style.width = `${textRef.clientWidth}px`);
   };
 
   useEffect(() => {
-    adjustButtonFilterHeight();
+    // adjustButtonFilterWidth();
 
     window.addEventListener("scroll", () =>
       elementEffect(elRef.current, visible, setVisible)
@@ -95,12 +95,12 @@ function ServiceItem({ title, src, des, anim, num }) {
           smooth={true}
           offset={-70}
           duration={500}
-          className="group relative w-full h-8 cursor-pointer bg-mainP mt-4 font-jp"
+          className="group cursor-pointer bg-mainP mt-4 font-jp"
           id="buttonFilter"
         >
           <span
-            className="absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 z-10
-               flex justify-center items-center translate-all duration-300 w-max h-full
+            className="transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0
+               flex justify-center items-center duration-300 w-max h-full z-10
                border-2 border-solid border-mainB lg:text-lg xl:text-xl 2xl:text-2xl text-[#162447]"
             id="buttonText"
           >
