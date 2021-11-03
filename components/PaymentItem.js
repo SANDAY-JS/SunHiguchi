@@ -28,7 +28,7 @@ function PaymentItem({
   return (
     <div
       ref={elRef}
-      className={`w-full md:w-2/3 mb-5 transition-all duration-500 relative ${
+      className={`w-full md:w-2/3 2xl:w-full transition-all duration-500 relative ${
         num ? "-left-invisible" : "left-invisible"
       } ${visible && "!left-0"}`}
       id={`payment_${title}`}

@@ -21,8 +21,8 @@ function VoiceItem({ name, link, src, des }) {
   return (
     <div
       ref={elRef}
-      className={`flex flex-col justify-between items-center mx-4 mb-5
-      border-solid border-mainP border-2 lg:border-4 w-5/6 sm:w-1/4 md:w-1/3 lg:w-1/4 transition-opacity duration-500 opacity-0 ${
+      className={`flex flex-col justify-center items-center gap-3
+      border-solid border-mainP border-2 lg:border-4 w-full sm:w-1/4 md:w-1/3 lg:w-1/4 transition-opacity duration-500 opacity-0 ${
         visible && "opacity-100"
       }`}
     >

@@ -6,7 +6,7 @@ function Payment() {
     <section className="relative bg-web-person bg-left md:bg-center bg-no-repeat overflow-x-hidden">
       <h2 id="to_payment">Payment</h2>
       <p>料金</p>
-      <div className="flex flex-col items-center z-10">
+      <div className="flex flex-col items-center gap-5 2xl:max-w-screen-xl 2xl:mx-auto z-10">
         <PaymentItem
           title={"Web開発"}
           matter1={"フロントエンド開発"}

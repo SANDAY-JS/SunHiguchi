@@ -9,7 +9,7 @@ function Projects() {
     <section>
       <h2 id="to_projects">Projects</h2>
       <p>制作実績</p>
-      <div className="flex flex-wrap justify-center w-full xl:max-w-screen-xl xl:mx-auto">
+      <div className="flex flex-wrap justify-center xl:justify-between w-full lg:max-w-screen-lg xl:max-w-screen-xl xl:mx-auto">
         {projectList.map((project) => (
           <ProjectItem
             title={project.title}

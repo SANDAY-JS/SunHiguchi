@@ -71,7 +71,7 @@ function About() {
           visible && "!left-0 xl:!left-1/2"
         }`}
       >
-        <p className="xl:leading-relaxed">
+        <p className="max-w-full xl:leading-relaxed">
           ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb開発、Web制作活動を行っています、樋口賛と申します。
           <br />
           <br />

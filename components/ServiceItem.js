@@ -39,14 +39,14 @@ function ServiceItem({ title, src, des, anim, num }) {
   return (
     <div
       ref={elRef}
-      className={`flex flex-col sm:flex-row justify-between items-center flex-wrap xl:w-full mb-10 
+      className={`flex flex-col sm:flex-row justify-between items-center flex-wrap gap-5 sm:gap-0 xl:w-full
       transition-all duration-500 relative  ${
         num % 2 === 0 ? "-left-invisible" : "left-invisible"
       } ${visible && "!left-0"}`}
     >
       <div
-        className={`relative w-full sm:w-1/2 flex flex-wrap justify-center mb-5 ${
-          num % 2 !== 0 && "sm:order-1"
+        className={`relative w-full sm:w-1/2 flex flex-wrap justify-center sm:justify-start ${
+          num % 2 !== 0 && "sm:order-1 sm:justify-end"
         }`}
       >
         <h4
@@ -70,7 +70,7 @@ function ServiceItem({ title, src, des, anim, num }) {
                 ))}
         </h4>
         <Image
-          width={540}
+          width={700}
           height={360}
           objectFit="cover"
           src={src}
