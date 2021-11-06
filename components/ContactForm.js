@@ -46,7 +46,7 @@ function ContactForm({ setMessage }) {
       onSubmit={(e) => handleOnSubmit(e)}
       action={"https://formspree.io/f/xzbyevqk"}
       method="POST"
-      className="text-[#fafafa] w-3/4 sm:w-auto sm:col-span-4"
+      className="text-[#fafafa] w-5/6 sm:w-auto sm:col-span-4 md:w-2/3 lg:w-auto"
     >
       <p ref={statusRef}></p>
 

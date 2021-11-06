@@ -9,7 +9,7 @@ function Voice() {
     <section>
       <h2 id="to_voice">Voice</h2>
       <p>クライアント様の声</p>
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex flex-wrap gap-5 justify-between md:justify-around lg:justify-between w-full xl:max-w-screen-xl xl:mx-auto">
         {voiceList.map((voice) => (
           <VoiceItem
             name={voice.name}
