@@ -90,7 +90,7 @@ function About() {
         <h3 className="text-[#162447] text-center text-2xl xl:text-3xl">
           My Skills
         </h3>
-        <ul className="flex flex-wrap justify-between mt-4 md:px-6 md:w-1/2 xl:max-w-screen-xl">
+        <ul className="flex flex-wrap justify-between mt-4 md:px-6 xl:w-1/2 xl:max-w-screen-xl">
           {mySkillsList.map((mySkill, i) => (
             <li
               className="group w-1/3 md:w-1/5 flex flex-col items-center mt-2"
