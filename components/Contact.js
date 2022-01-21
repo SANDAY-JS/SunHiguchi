@@ -1,7 +1,11 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import WaveSvg from "../public/images/wave_bottom.svg";
 import { AiFillFacebook } from "react-icons/ai";
-import { FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
+import {
+  FaGithubSquare,
+  FaInstagramSquare,
+  FaTwitterSquare,
+} from "react-icons/fa";
 import ContactForm from "./ContactForm";
 import { MenuListProvider } from "../StateProvider";
 
@@ -38,6 +42,11 @@ function Contact() {
           <li>
             <a href="https://github.com/SANDAY-JS" target="_blank">
               <FaGithubSquare className={`fill-black ${SNS_STYLES}`} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/san_higuchi/" target="_blank">
+              <FaInstagramSquare className={`fill-[#e871c1] ${SNS_STYLES}`} />
             </a>
           </li>
           <li>
