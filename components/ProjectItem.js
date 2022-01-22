@@ -20,7 +20,7 @@ function ProjectItem({ title, language, src, link }) {
   return (
     <div
       ref={elRef}
-      className={`text-center mb-5 w-full max-w-full overflow-hidden sm:w-1/2 lg:w-1/4 will-change-scale transition-transform duration-500 transform scale-50 ${
+      className={`text-center mb-5 w-full max-w-full overflow-hidden sm:w-1/2 lg:w-1/4 transition-transform duration-500 transform scale-50 ${
         visible && "scale-100"
       }`}
     >
