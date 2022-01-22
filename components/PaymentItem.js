@@ -64,16 +64,14 @@ function PaymentItem({
       } ${visible && "!left-0"}`}
       id={`payment_${title}`}
     >
-      <h3 className="text-mainP text-2xl font-extrabold text-center">
-        {title}
-      </h3>
+      <h3 className="text-2xl font-black text-center">{title}</h3>
       <table className="w-full border-none bg-opacity-40">
         <thead className="py-4">
           <tr>
-            <th className="w-1/2 border-none text-center font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-none text-center underline font-jp p-3 sm:p-4">
               ご依頼内容
             </th>
-            <th className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-collapse text-center underline font-jp p-3 sm:p-4">
               料金
             </th>
           </tr>
