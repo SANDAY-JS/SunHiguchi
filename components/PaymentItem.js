@@ -85,7 +85,9 @@ function PaymentItem({
             <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               {payment1Des ? (
                 <details className="cursor-pointer">
-                  <summary>¥{payment1}～</summary>
+                  <summary className="border-none outline-none">
+                    ¥{payment1}～
+                  </summary>
                   <span className="block text-xs sm:text-base">
                     {payment1Des}
                   </span>
@@ -108,7 +110,9 @@ function PaymentItem({
               <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
                 {payment2Des ? (
                   <details className="cursor-pointer">
-                    <summary>¥{payment2}～</summary>
+                    <summary className="border-none outline-none">
+                      ¥{payment2}～
+                    </summary>
                     <span className="block text-xs sm:text-base">
                       {payment2Des}
                     </span>
