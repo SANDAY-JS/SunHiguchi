@@ -20,21 +20,21 @@ function Payment() {
           payment1={"29,000"}
           payment1Des={"＊～30秒の場合。長さによって料金が前後いたします。"}
           matter2={"サイト内のアニメーション再現"}
-          payment2={"19, 000"}
+          payment2={"19,000"}
           payment2Des={""}
           num={false}
         />
         <PaymentItem
           title={"WordPress関連"}
           matter1={"デザイン, フロントエンド開発"}
-          payment1={"39, 000"}
+          payment1={"39,000"}
           payment1Des={""}
           num={true}
         />
         <PaymentItem
           title={"Web制作"}
           matter1={"Webページ / LP制作"}
-          payment1={"69, 000"}
+          payment1={"69,000"}
           payment1Des={
             "（通常料金：¥59,000 + レスポンシブ化：¥10,000）＊参考サイト・デザインをご提示ください"
           }

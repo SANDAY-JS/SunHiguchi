@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {
+  createRef,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { MenuListProvider } from "../StateProvider";
 
 function PaymentItem({
@@ -13,17 +19,42 @@ function PaymentItem({
 }) {
   const { elementEffect } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
+
+  const [isPageWide, setIsPageWide] = useState(false);
   const elRef = useRef();
 
+  const checkDeviceWidth = () => {
+    const match = window.matchMedia("(max-width: 769px)");
+    if (match.matches) return setIsPageWide(false);
+    if (!match.matches) {
+      setIsPageWide(true);
+    }
+  };
+
   useEffect(() => {
+    checkDeviceWidth();
+
+    window.addEventListener("resize", checkDeviceWidth);
     window.addEventListener("scroll", () =>
       elementEffect(elRef.current, visible, setVisible)
     );
-    return () =>
+    return () => {
+      window.removeEventListener("resize", checkDeviceWidth);
       window.removeEventListener("scroll", () =>
         elementEffect(elRef.current, visible, setVisible)
       );
+    };
   }, []);
+
+  useEffect(() => {
+    // PCの場合、detailsタグをopen
+    if (!isPageWide) return;
+
+    const detailsTag = document.querySelectorAll("details");
+    if (isPageWide) {
+      detailsTag.forEach((el) => el.setAttribute("open", ""));
+    }
+  }, [isPageWide]);
 
   return (
     <div
@@ -54,8 +85,21 @@ function PaymentItem({
               {matter1}
             </td>
             <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-              ¥{payment1}～
-              <span className="block text-xs sm:text-base">{payment1Des}</span>
+              {payment1Des ? (
+                <details className="cursor-pointer">
+                  <summary>¥{payment1}～</summary>
+                  <span className="block text-xs sm:text-base">
+                    {payment1Des}
+                  </span>
+                </details>
+              ) : (
+                <>
+                  ¥{payment1}～
+                  <span className="block text-xs sm:text-base">
+                    {payment1Des}
+                  </span>
+                </>
+              )}
             </td>
           </tr>
           {matter2 && (
@@ -64,10 +108,21 @@ function PaymentItem({
                 {matter2}
               </td>
               <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-                ¥{payment2}～
-                <span className="block text-xs sm:text-base">
-                  {payment2Des}
-                </span>
+                {payment2Des ? (
+                  <details className="cursor-pointer">
+                    <summary>¥{payment2}～</summary>
+                    <span className="block text-xs sm:text-base">
+                      {payment2Des}
+                    </span>
+                  </details>
+                ) : (
+                  <>
+                    ¥{payment2}～
+                    <span className="block text-xs sm:text-base">
+                      {payment2Des}
+                    </span>
+                  </>
+                )}
               </td>
             </tr>
           )}
