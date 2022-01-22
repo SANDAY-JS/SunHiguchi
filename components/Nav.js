@@ -10,6 +10,7 @@ function Nav() {
   useEffect(() => {
     checkWidth();
     window.addEventListener("resize", checkWidth);
+    // return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
   const checkWidth = () => {
@@ -28,7 +29,7 @@ function Nav() {
   return (
     <header>
       <nav
-        className={`fixed left-0 z-50 container duration-300 max-w-full ${
+        className={`fixed left-0 z-50 container duration-300 max-w-full xl:left-1/2 xl:transform xl:-translate-x-1/2 xl:max-w-screen-xl xl:justify-between ${
           isMenuActive ? "top-3 2xl:top-6" : "-top-10"
         }`}
       >

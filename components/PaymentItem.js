@@ -28,22 +28,21 @@ function PaymentItem({
   return (
     <div
       ref={elRef}
-      className={`w-full md:w-2/3 2xl:w-full transition-all duration-500 relative ${
+      className={`clay card w-full md:w-2/3 2xl:w-full transition-all duration-500 relative overflow-hidden ${
         num ? "-left-invisible" : "left-invisible"
       } ${visible && "!left-0"}`}
       id={`payment_${title}`}
     >
-      <h3 className="text-mainP text-xl font-extrabold text-center">{title}</h3>
-      <table
-        className="w-full border-collapse border-2 border-solid border-[#673ab7]
-        bg-opacity-40 bg-[#fff] "
-      >
+      <h3 className="text-mainP text-2xl font-extrabold text-center">
+        {title}
+      </h3>
+      <table className="w-full border-none bg-opacity-40">
         <thead className="py-4">
           <tr>
-            <th className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-none text-center font-jp p-3 sm:p-4">
               ご依頼内容
             </th>
-            <th className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               料金
             </th>
           </tr>
@@ -51,20 +50,20 @@ function PaymentItem({
 
         <tbody>
           <tr>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               {matter1}
             </td>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               ¥{payment1}～
               <span className="block text-xs sm:text-base">{payment1Des}</span>
             </td>
           </tr>
           {matter2 && (
             <tr>
-              <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+              <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
                 {matter2}
               </td>
-              <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+              <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
                 ¥{payment2}～
                 <span className="block text-xs sm:text-base">
                   {payment2Des}
@@ -73,10 +72,10 @@ function PaymentItem({
             </tr>
           )}
           <tr>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               その他のご依頼（柔軟に対応致します）
             </td>
-            <td className="w-1/2 border-collapse border border-[#673ab7] text-center font-jp p-3 sm:p-4">
+            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
               要相談
             </td>
           </tr>
