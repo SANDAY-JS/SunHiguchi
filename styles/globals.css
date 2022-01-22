@@ -31,4 +31,14 @@
   p {
     @apply lg:text-xl 2xl:text-2xl text-[#382e2e] font-jp text-center;
   }
+
+  .card {
+    /* clay.cssのプロパティを上書き */
+    --clay-background: #402f81e3;
+    --clay-border-radius: 48px;
+
+    /* 拡張スタイル */
+    color: #eee;
+    padding: 32px 0px;
+  }
 }

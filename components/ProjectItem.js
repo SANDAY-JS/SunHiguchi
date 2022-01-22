@@ -40,6 +40,7 @@ function ProjectItem({ title, language, src, link }) {
           height={396}
           loading="eager"
           objectFit={"cover"}
+          placeholder={"blur"}
           className="w-full rounded-lg overflow-hidden transform duration-500 group-hover:scale-125"
         />
       </a>

@@ -38,6 +38,10 @@ export default function Home() {
             type="image/png"
             href="./images/source-code-icon-64-213242.png"
           />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/claymorphism-css/dist/clay.css"
+          />
         </Head>
         <LoadingAnim />
         <TopDesign />
