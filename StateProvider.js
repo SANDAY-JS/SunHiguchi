@@ -78,41 +78,41 @@ export default function StateProvider({ children }) {
     {
       title: "Amazon Clone",
       language: "React.js",
-      src: "/images/amazon-clone.png",
+      src: "/images/amazon-clone.webp",
       link: "https://clone-bc279.web.app/",
     },
     {
-      title: "Movie App",
-      language: "React.js",
-      src: "/images/mcu-movie-checker.jpg",
-      link: "https://mcu-movie-checker.vercel.app/",
+      title: "MCU Shows Order Check",
+      language: "Next.js / TypeScript",
+      src: "/images/mcu-recommendation.webp",
+      link: "https://mcu-recommendation.vercel.app/",
     },
     {
       title: "Hulu Clone",
       language: "Next.js",
-      src: "/images/hulu-clone.jpg",
+      src: "/images/hulu-clone.webp",
       link: "https://hulu-clone-gray.vercel.app/",
     },
   ];
   const servicesList = [
     {
       title: "Web開発",
-      src: "/images/web-development.jpg",
+      src: "/images/web-development.webp",
       des: "Web上のシステム開発を承っております。ReactやNext.js, TypeScriptなどフロントエンドの業務範囲を専門としておりますが、Firebase等を用いたバックエンドの業務も対応可能です。",
     },
     {
       title: "アニメーション制作",
-      src: "/images/animation.jpg",
+      src: "/images/animation.webp",
       des: "アニメーション制作も承っております。gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
     },
     {
       title: "WordPress関連案件",
-      src: "/images/wordpress-development.jpg",
+      src: "/images/wordpress-development.webp",
       des: "Wordpressの案件も受け付けております。デザインのカスタマイズから開発の案件まで対応致します。私自身WordPressサイトを運営しておりますので、ぜひお気軽にご相談ください。",
     },
     {
       title: "Web制作",
-      src: "/images/web-production.jpg",
+      src: "/images/web-production.webp",
       des: "ユーザビリティを意識したWebサイトを制作させていただきます。コーディングからCMS導入までお受けしております。ただコードを書くだけでなく、SEO対策や読みやすさを意識したコーディングを致します。スマートフォンサイトの制作もお任せください。",
     },
   ];
