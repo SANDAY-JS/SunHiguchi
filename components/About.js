@@ -67,7 +67,7 @@ function About() {
       </h2>
       <div
         ref={elRef1}
-        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible xl:max-w-screen-lg 2xl:max-w-screen-xl xl:transform xl:-translate-x-1/2 ${
+        className={`about__detail flex justify-center mb-8 transition-all duration-500 relative left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
           visible && "!left-0 xl:!left-1/2"
         }`}
       >
@@ -75,7 +75,7 @@ function About() {
           ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb開発、Web制作活動を行っています、樋口賛と申します。
           <br />
           <br />
-          Web開発やWeb制作を始め、ワードプレスのカスタマイズなど、様々な業務を受け付けております。
+          企業での実務開発経験を活かし、Web開発やWeb制作を始めた様々な業務を受け付けております。
           <br />
           <br />
           下記に可能な業務内容などを記載しておりますので、ご覧いただけますと幸いです。
@@ -90,7 +90,7 @@ function About() {
         <h3 className="text-[#162447] text-center text-2xl xl:text-3xl">
           My Skills
         </h3>
-        <ul className="flex flex-wrap justify-between mt-4 md:px-6 xl:w-1/2 xl:max-w-screen-xl">
+        <ul className="flex flex-wrap justify-between mt-4 md:px-6 xl:w-2/3 xl:max-w-screen-lg">
           {mySkillsList.map((mySkill, i) => (
             <li
               className="group w-1/3 md:w-1/5 flex flex-col items-center mt-2"

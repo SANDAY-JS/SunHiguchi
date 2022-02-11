@@ -98,12 +98,12 @@ export default function StateProvider({ children }) {
     {
       title: "Web開発",
       src: "/images/web-development.webp",
-      des: "Web上のシステム開発を承っております。ReactやNext.js, TypeScriptなどフロントエンドの業務範囲を専門としておりますが、Firebase等を用いたバックエンドの業務も対応可能です。",
+      des: "Web上のシステム開発を承っております。IT企業でのアジャイル開発経験がございます。ReactやNext.js, TypeScriptなどフロントエンドの業務範囲を専門としております。一部Firebase等を用いたバックエンドの業務も対応可能です。",
     },
     {
       title: "アニメーション制作",
       src: "/images/animation.webp",
-      des: "アニメーション制作も承っております。gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
+      des: "アニメーション制作も承っております。アニメーションのチーム開発経験を活かし、gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
     },
     {
       title: "WordPress関連案件",
