@@ -85,7 +85,7 @@ export default function StateProvider({ children }) {
       title: "MCU Shows Order Check",
       language: "Next.js / TypeScript",
       src: "/images/mcu-recommendation.webp",
-      link: "https://mcu-recommendation.vercel.app/",
+      link: "https://mcu-order-check.vercel.app/",
     },
     {
       title: "Hulu Clone",
