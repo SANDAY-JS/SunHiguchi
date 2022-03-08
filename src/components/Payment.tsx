@@ -12,6 +12,9 @@ function Payment() {
           matter1={"フロントエンド開発"}
           payment1={"39,000"}
           payment1Des={""}
+          matter2={null}
+          payment2={null}
+          payment2Des={null}
           num={true}
         />
         <PaymentItem
@@ -29,6 +32,9 @@ function Payment() {
           matter1={"デザイン, フロントエンド開発"}
           payment1={"39,000"}
           payment1Des={""}
+          matter2={null}
+          payment2={null}
+          payment2Des={null}
           num={true}
         />
         <PaymentItem
@@ -38,6 +44,9 @@ function Payment() {
           payment1Des={
             "（通常料金：¥59,000 + レスポンシブ化：¥10,000）＊参考サイト・デザインをご提示ください"
           }
+          matter2={null}
+          payment2={null}
+          payment2Des={null}
           num={false}
         />
       </div>

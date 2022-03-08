@@ -43,6 +43,7 @@ export default function Home() {
             href="https://unpkg.com/claymorphism-css/dist/clay.css"
           />
         </Head>
+
         <LoadingAnim />
         <TopDesign />
         <Layout>

@@ -6,7 +6,7 @@ function ContactForm({ setMessage }) {
   const [state, handleSubmit] = useForm("xzbyevqk");
   const statusRef = useRef();
 
-  const [serverState, setServerState] = useState<any>({
+  const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
   });
@@ -27,7 +27,7 @@ function ContactForm({ setMessage }) {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    setServerState({ submitting: true });
+    setServerState({ submitting: true, status: null });
     axios({
       method: "post",
       url: "https://formspree.io/xzbyevqk",
