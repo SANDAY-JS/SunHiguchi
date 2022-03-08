@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import WaveSvg from "../public/images/wave_bottom.svg";
+import WaveBottom from "./WaveBottom";
 import { AiFillFacebook } from "react-icons/ai";
 import {
   FaGithubSquare,
@@ -7,7 +7,7 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 import ContactForm from "./ContactForm";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 
 function Contact() {
   const { menuColorDetect } = useContext(MenuListProvider);
@@ -30,7 +30,7 @@ function Contact() {
       ref={contactSecRef}
       className="relative pt-20 lg:pt-40 bg-gradient-to-br from-[#162447] to-[#673ab7] pb-10"
     >
-      <WaveSvg className="absolute top-0 left-0 fill-[#eee] w-full pointer-events-none" />
+      <WaveBottom />
       <h2 id="to_contact" className="text-[#eee]">
         Contact
       </h2>

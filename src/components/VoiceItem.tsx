@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 
 function VoiceItem({ name, link, src, des }) {
   const { elementEffect } = useContext(MenuListProvider);

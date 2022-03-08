@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import VoiceItem from "./VoiceItem";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 
 function Voice() {
   const { voiceList } = useContext(MenuListProvider);

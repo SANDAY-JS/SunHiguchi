@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
-
-export const MenuListProvider = createContext();
+export const MenuListProvider = createContext(null);
 
 export default function StateProvider({ children }) {
   const [menuColor, setMenuColor] = useState(false);
@@ -69,6 +68,7 @@ export default function StateProvider({ children }) {
     "JavaScript",
     "React.js",
     "Next.js",
+    "Node.js",
     "TypeScript",
     "Firebase",
     "WordPress",

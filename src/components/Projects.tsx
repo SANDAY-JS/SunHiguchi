@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 import ProjectItem from "./ProjectItem";
 
 function Projects() {

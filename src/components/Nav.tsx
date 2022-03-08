@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 import { Link } from "react-scroll";
 
 function Nav() {

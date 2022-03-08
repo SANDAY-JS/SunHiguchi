@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 
 function ProjectItem({ title, language, src, link }) {
   const { elementEffect } = useContext(MenuListProvider);
@@ -42,6 +42,7 @@ function ProjectItem({ title, language, src, link }) {
           objectFit={"cover"}
           placeholder={"blur"}
           className="w-full rounded-lg overflow-hidden transform duration-500 group-hover:scale-125"
+          blurDataURL={src}
         />
       </a>
     </div>

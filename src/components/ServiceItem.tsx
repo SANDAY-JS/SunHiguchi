@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 import gsap, { Elastic } from "gsap";
 
 function ServiceItem({ title, src, des, anim, num }) {

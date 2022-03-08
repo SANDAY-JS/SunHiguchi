@@ -1,9 +1,14 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { MenuListProvider } from "../provider/StateProvider";
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
 import { DiCss3Full, DiSass } from "react-icons/di";
-import { SiTailwindcss, SiNextDotJs, SiTypescript } from "react-icons/si";
-import { MenuListProvider } from "../StateProvider";
+import {
+  SiTailwindcss,
+  SiNextDotJs,
+  SiNodeDotJs,
+  SiTypescript,
+} from "react-icons/si";
 import {
   IoLogoJavascript,
   IoLogoWordpress,
@@ -54,6 +59,7 @@ function About() {
     <IoLogoJavascript className={svgStyle} />,
     <IoLogoReact className={svgStyle} />,
     <SiNextDotJs className={svgStyle} />,
+    <SiNodeDotJs className={svgStyle} />,
     <SiTypescript className={svgStyle} />,
     <IoLogoFirebase className={svgStyle} />,
     <IoLogoWordpress className={svgStyle} />,
@@ -90,7 +96,7 @@ function About() {
         <h3 className="text-[#162447] text-center text-2xl xl:text-3xl">
           My Skills
         </h3>
-        <ul className="flex flex-wrap justify-between mt-4 md:px-6 xl:w-2/3 xl:max-w-screen-lg">
+        <ul className="flex flex-wrap justify-around mt-4 md:px-6 xl:w-2/3 xl:max-w-screen-lg">
           {mySkillsList.map((mySkill, i) => (
             <li
               className="group w-1/3 md:w-1/5 flex flex-col items-center mt-2"

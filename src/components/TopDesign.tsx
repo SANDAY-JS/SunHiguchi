@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import WaveSvg from "../public/images/wave_top.svg";
+import WaveTop from "./WaveTop";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import { FiArrowUpCircle } from "react-icons/fi";
-import { MenuListProvider } from "../StateProvider";
+import { MenuListProvider } from "../provider/StateProvider";
 import { Link } from "react-scroll";
 
 function TopDesign() {
@@ -27,7 +27,7 @@ function TopDesign() {
           Front-end developer
         </p>
 
-        <WaveSvg className="absolute bottom-0 left-0" />
+        <WaveTop />
 
         <div className="absolute transform -translate-x-1/2 left-1/2 bottom-5 2xl:bottom-8 cursor-pointer">
           <Link

@@ -9,7 +9,7 @@ import Payment from "../components/Payment";
 import Contact from "../components/Contact";
 import TopDesign from "../components/TopDesign";
 import Layout from "../components/Layout";
-import StateProvider from "../StateProvider";
+import StateProvider from "../provider/StateProvider";
 import LoadingAnim from "../assets/LoadingAnim";
 
 export default function Home() {
