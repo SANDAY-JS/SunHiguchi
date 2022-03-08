@@ -35,7 +35,7 @@
   .card {
     /* clay.cssのプロパティを上書き */
     --clay-background: #402f81e3;
-    --clay-border-radius: 48px;
+    --clay-border-radius: 24px;
 
     /* 拡張スタイル */
     color: #eee;

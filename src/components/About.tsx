@@ -32,11 +32,11 @@ function About() {
     window.addEventListener("scroll", () =>
       elementEffect(elRef1.current, visible, setVisible)
     );
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef2.current, visible, setVisible)
-    );
     window.removeEventListener("scroll", () =>
       elementEffect(elRef1.current, visible, setVisible)
+    );
+    window.addEventListener("scroll", () =>
+      elementEffect(elRef2.current, visible, setVisible)
     );
     window.removeEventListener("scroll", () =>
       elementEffect(elRef2.current, visible, setVisible)

@@ -23,7 +23,7 @@ function Nav() {
   };
 
   const MENU_LINES_BASE_CSS = `absolute left-0 transition-all duration-300 h-0.5 w-full ${
-    menuColor ? " bg-mainP" : " bg-[#ddd]"
+    menuColor ? " bg-mainB" : " bg-[#ddd]"
   }`;
 
   return (

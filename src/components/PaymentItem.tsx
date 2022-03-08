@@ -1,12 +1,17 @@
-import React, {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
 
-function PaymentItem({
+// const PaymentItem: React.FC<PaymentContents> = ({
+//   title,
+//   matter1,
+//   matter2,
+//   payment1,
+//   payment1Des,
+//   payment2,
+//   payment2Des,
+//   num,
+// }: PaymentContents) => {
+const PaymentItem = ({
   title,
   matter1,
   matter2,
@@ -15,7 +20,7 @@ function PaymentItem({
   payment2,
   payment2Des,
   num,
-}) {
+}) => {
   const { elementEffect } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
 
@@ -46,7 +51,7 @@ function PaymentItem({
   }, []);
 
   useEffect(() => {
-    // PCの場合、detailsタグをopen
+    // PCの場合、detailsタグをopenに
     if (!isPageWide) return;
 
     const detailsTag = document.querySelectorAll("details");
@@ -58,9 +63,8 @@ function PaymentItem({
   return (
     <div
       ref={elRef}
-      className={`clay card w-full md:w-2/3 2xl:w-full transition-all duration-500 relative overflow-hidden ${
-        num ? "-left-invisible" : "left-invisible"
-      } ${visible && "!left-0"}`}
+      className={`clay card w-full md:w-2/3 2xl:w-full transition-transform transform scale-0 origin-center duration-500
+      relative left-0 overflow-hidden ${visible && "!scale-100"}`}
       id={`payment_${title}`}
     >
       <h3 className="text-2xl font-black text-center">{title}</h3>
@@ -139,6 +143,6 @@ function PaymentItem({
       </table>
     </div>
   );
-}
+};
 
 export default PaymentItem;
