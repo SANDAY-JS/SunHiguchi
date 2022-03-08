@@ -6,7 +6,7 @@ function ContactForm({ setMessage }) {
   const [state, handleSubmit] = useForm("xzbyevqk");
   const statusRef = useRef();
 
-  const [serverState, setServerState] = useState({
+  const [serverState, setServerState] = useState<any>({
     submitting: false,
     status: null,
   });
