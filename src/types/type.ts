@@ -1,3 +1,4 @@
+export {};
 // export type MenuContents = string[];
 
 // export interface ProjectContents {
