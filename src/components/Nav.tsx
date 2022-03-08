@@ -38,7 +38,9 @@ function Nav() {
             <li
               className={`cursor-pointer transition-colors duration-300 font-black md:text-xl lg:text-xl 2xl:text-3xl
                  hover:text-[#673ab7] ${
-                   menuColor ? "text-mainP" : "text-[#ddd]"
+                   menuColor
+                     ? "text-[#673ab7] hover:text-[#ddd]"
+                     : "text-[#ddd]"
                  }
                ${(i === 1 || i === 4) && deviceWidth && "hidden"}`}
               key={menu}

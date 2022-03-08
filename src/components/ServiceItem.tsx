@@ -51,7 +51,7 @@ function ServiceItem({ title, src, des, anim, num }) {
       >
         <h4
           className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
-         z-10 text-3xl lg:text-4xl text-[#e43f5a] font-extrabold text-center whitespace-nowrap"
+         z-10 text-3xl lg:text-4xl text-[#ddd] font-extrabold text-center whitespace-nowrap"
         >
           {!anim
             ? title
@@ -86,12 +86,12 @@ function ServiceItem({ title, src, des, anim, num }) {
           smooth={true}
           offset={-70}
           duration={500}
-          className="group cursor-pointer bg-mainP mt-4 font-jp"
+          className="group cursor-pointer bg-[#ddd] mt-4 font-jp transition-colors duration-300 hover:bg-mainB"
         >
           <span
             className="transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0
-               flex justify-center items-center duration-300 w-max h-full z-10
-               border-2 border-solid border-mainB lg:text-lg xl:text-xl 2xl:text-2xl text-[#162447]"
+               flex justify-center items-center duration-300 w-max h-full z-10 px-2
+               border-2 border-solid border-mainB lg:text-lg xl:text-xl 2xl:text-2xl text-[#162447] group-hover:text-[#ddd]"
           >
             料金を確認する
           </span>
