@@ -2,8 +2,8 @@ module.exports = {
   mode: "jit",
   purge: {
     content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
+      "./src/pages/**/*.{js,ts,jsx,tsx}",
+      "./src/components/**/*.{js,ts,jsx,tsx}",
     ],
     options: {
       safelist: [/^opacity-/, /^m-/, /^p-/, /^right-/],
@@ -21,6 +21,8 @@ module.exports = {
     },
     rotate: {
       360: "360deg",
+      405: "405deg",
+      "-405": "-405deg",
     },
     colors: {
       mainP: "#dd7f8f",
