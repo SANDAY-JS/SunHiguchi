@@ -41,8 +41,8 @@ function About() {
       </h2>
       <div
         ref={elRef1}
-        className={`about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
-          visible && "!left-0 xl:!left-1/2"
+        className={`about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
+          visible && "opacity-100 !left-0 xl:!left-1/2"
         }`}
       >
         <p className="max-w-full leading-7 xl:leading-relaxed">
