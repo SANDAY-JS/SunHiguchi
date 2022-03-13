@@ -52,7 +52,7 @@ function ProjectItem({ title, languages, src, link, description, index }) {
           {/* buttons */}
           <div
             className={`flex flex-wrap gap-2 md:gap-4 ${
-              isEvenNumber && "justify-end"
+              isEvenNumber && "md:justify-end"
             }`}
           >
             <a
