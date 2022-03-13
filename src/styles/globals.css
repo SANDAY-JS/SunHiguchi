@@ -16,7 +16,7 @@
   }
 
   section {
-    @apply mt-10 px-7;
+    @apply mt-32 px-7 xl:max-w-screen-xl xl:mx-auto;
   }
 
   h2 {
@@ -29,7 +29,10 @@
   }
 
   p {
-    @apply lg:text-xl 2xl:text-2xl text-[#382e2e] font-jp text-center;
+    @apply md:text-xl 2xl:text-2xl text-[#382e2e] font-jp;
+  }
+  h2 ~ p {
+    @apply text-center;
   }
 
   .card {

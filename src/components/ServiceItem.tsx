@@ -39,19 +39,19 @@ function ServiceItem({ title, src, des, anim, num }) {
   return (
     <div
       ref={elRef}
-      className={`flex flex-col sm:flex-row justify-between items-center flex-wrap gap-5 sm:gap-0 xl:w-full
-      transition-all duration-500 relative  ${
+      className={`flex flex-col md:flex-row justify-between items-center flex-wrap gap-5 md:gap-0 xl:w-full
+      transition-all duration-500 opacity-0 relative  ${
         num % 2 === 0 ? "-left-invisible" : "left-invisible"
-      } ${visible && "!left-0"}`}
+      } ${visible && "!left-0 opacity-100"}`}
     >
       <div
-        className={`relative w-full sm:w-1/2 flex flex-wrap justify-center sm:justify-start ${
-          num % 2 !== 0 && "sm:order-1 sm:justify-end"
+        className={`relative w-full md:w-1/2 h-full flex flex-wrap justify-center md:justify-start ${
+          num % 2 !== 0 && "md:order-1 md:justify-end"
         }`}
       >
         <h4
           className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
-         z-10 text-3xl lg:text-4xl text-[#ddd] font-extrabold text-center whitespace-nowrap"
+         z-10 text-3xl lg:text-5xl text-[#ddd] font-extrabold text-center whitespace-nowrap"
         >
           {!anim
             ? title
@@ -74,19 +74,19 @@ function ServiceItem({ title, src, des, anim, num }) {
           height={360}
           objectFit="cover"
           src={src}
-          className="w-full rounded-2xl"
+          className="w-full h-full rounded-2xl"
         />
       </div>
 
-      <div className="flex flex-col items-center w-full max-w-lg h-full sm:w-1/2 px-5">
-        <p className="max-w-md leading-tight xl:leading-normal">{des}</p>
+      <div className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
+        <p className="max-w-md leading-normal">{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
           smooth={true}
           offset={-70}
           duration={500}
-          className="group cursor-pointer bg-[#ddd] mt-4 font-jp transition-colors duration-300 hover:bg-mainB"
+          className="group cursor-pointer bg-[#ddd] md:mt-6 font-jp transition-colors duration-300 hover:bg-mainB"
         >
           <span
             className="transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0

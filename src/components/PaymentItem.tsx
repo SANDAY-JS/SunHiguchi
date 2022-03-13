@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
 
-const PaymentItem = ({
+function PaymentItem({
   title,
   matter1,
   matter2,
@@ -10,17 +10,7 @@ const PaymentItem = ({
   payment2,
   payment2Des,
   num,
-}) => {
-  // const PaymentItem: React.FC<PaymentContents> = ({
-  //   title,
-  //   matter1,
-  //   matter2,
-  //   payment1,
-  //   payment1Des,
-  //   payment2,
-  //   payment2Des,
-  //   num,
-  // }: PaymentContents) => {
+}) {
   const { elementEffect } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
 
@@ -143,6 +133,6 @@ const PaymentItem = ({
       </table>
     </div>
   );
-};
+}
 
 export default PaymentItem;

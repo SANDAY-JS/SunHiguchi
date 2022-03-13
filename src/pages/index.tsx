@@ -18,7 +18,7 @@ export default function Home() {
       <StateProvider>
         <Head>
           <title>Sun Higuchi ~Web制作・開発~</title>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
           <meta
             name="description"
             content="Sun Higuchi's Web Page by next js"

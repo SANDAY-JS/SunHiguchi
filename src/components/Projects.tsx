@@ -9,14 +9,16 @@ function Projects() {
     <section>
       <h2 id="to_projects">Projects</h2>
       <p>制作実績</p>
-      <div className="flex flex-wrap justify-center lg:justify-between w-full lg:max-w-screen-xl lg:mx-auto">
-        {projectList.map((project) => (
+      <div className="flex flex-col w-full gap-10 ">
+        {projectList.map((project, i) => (
           <ProjectItem
             title={project.title}
-            language={project.language}
+            languages={project.languages}
             src={project.src}
             key={project.title}
             link={project.link}
+            description={project.description}
+            index={i}
           />
         ))}
       </div>

@@ -28,7 +28,7 @@ function Contact() {
   return (
     <section
       ref={contactSecRef}
-      className="relative pt-20 lg:pt-40 bg-gradient-to-br from-[#162447] to-[#673ab7] pb-10"
+      className="relative pt-20 lg:pt-40 bg-gradient-to-br from-[#162447] to-[#673ab7] pb-10 max-w-none"
     >
       <WaveBottom />
       <h2 id="to_contact" className="text-[#eee]">

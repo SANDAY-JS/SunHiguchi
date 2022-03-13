@@ -21,6 +21,8 @@ module.exports = {
     },
     rotate: {
       360: "360deg",
+      405: "405deg",
+      "-405": "-405deg",
     },
     colors: {
       mainP: "#dd7f8f",

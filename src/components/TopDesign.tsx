@@ -13,7 +13,7 @@ function TopDesign() {
     <>
       <div
         className="relative bg-gradient-to-br from-[#162447] to-[#673ab7]
-    flex flex-col justify-center items-center w-full h-screen"
+                   flex flex-col justify-center items-center w-full h-screen"
         id="top"
       >
         <h1
