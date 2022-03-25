@@ -53,7 +53,7 @@ function PaymentItem({
   return (
     <div
       ref={elRef}
-      className={`clay card w-full md:w-2/3 2xl:w-full transition-transform transform scale-0 origin-center duration-500
+      className={`clay card w-full md:w-4/5 2xl:w-full transition-transform transform scale-0 origin-center duration-500
       relative left-0 overflow-hidden ${visible && "!scale-100"}`}
       id={`payment_${title}`}
     >

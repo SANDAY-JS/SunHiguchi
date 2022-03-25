@@ -2,14 +2,21 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
 
 function About() {
-  const { svgList, mySkillsList, elementEffect, menuColorDetect } =
-    useContext(MenuListProvider);
+  const {
+    svgList,
+    mySkillsList,
+    showElements,
+    elementEffect,
+    menuColorDetect,
+  } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
   const aboutSecRef = useRef();
   const elRef1 = useRef();
   const elRef2 = useRef();
 
   useEffect(() => {
+    const observeElements = Array.from(document.querySelectorAll(".entry"));
+    showElements([observeElements]);
     registerEventListeners();
   }, []);
 
@@ -41,7 +48,7 @@ function About() {
       </h2>
       <div
         ref={elRef1}
-        className={`about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
+        className={`entry about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
           visible && "opacity-100 !left-0 xl:!left-1/2"
         }`}
       >
@@ -57,7 +64,7 @@ function About() {
       </div>
       <div
         ref={elRef2}
-        className={`about__skills md:flex md:flex-col md:items-center md:gap-2 transition-all duration-500 opacity-0 ${
+        className={`entry about__skills md:flex md:flex-col md:items-center md:gap-2 transition-all duration-500 opacity-0 ${
           visible && "opacity-100"
         } `}
       >

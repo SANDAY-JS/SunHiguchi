@@ -19,18 +19,16 @@ export default function Home() {
         <Head>
           <title>Sun Higuchi ~Web制作・開発~</title>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
-          <meta
-            name="description"
-            content="Sun Higuchi's Web Page by next js"
-          />
+          <meta name="description" content="Sun Higuchi's WebSite" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap"
             rel="stylesheet"
           />
           <link
@@ -50,8 +48,8 @@ export default function Home() {
           <Nav />
           <About />
           <Projects />
-          <Services />
           <Voice />
+          <Services />
           <Payment />
         </Layout>
         <Contact />
