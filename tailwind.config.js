@@ -12,8 +12,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: "Roboto, sans-serif",
-      jp: "Zen Old Mincho, serif",
+      sans: "Poppins, sans-serif",
+      jp: "Kosugi Maru, sans-serif",
     },
     fill: {
       svgColor: "#fff",
