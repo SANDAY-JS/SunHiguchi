@@ -1,13 +1,13 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useRef, useState } from "react";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
 import { DiCss3Full, DiSass } from "react-icons/di";
 import {
+  SiSolidity,
   SiNextdotjs,
   SiNodedotjs,
-  SiSolidity,
-  SiTailwindcss,
   SiTypescript,
+  SiTailwindcss,
 } from "react-icons/si";
 import {
   IoLogoJavascript,
@@ -20,6 +20,43 @@ export const MenuListProvider = createContext(null);
 
 export default function StateProvider({ children }) {
   const [menuColor, setMenuColor] = useState(false);
+
+  const elementObserver = useRef(null);
+  const imageObserver = useRef(null);
+
+  // useEffect(() => {
+  //   console.log("in effect");
+  //   elementObserver.current = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         entry.target.classList.toggle("show", entry.isIntersecting);
+  //         // stop observing elements already shown
+  //         if (entry.isIntersecting) this.unobserve(entry.target);
+  //       });
+  //     },
+  //     {
+  //       threshold: 1,
+  //     }
+  //   );
+
+  //   imageObserver.current = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         console.log("loading the image>>>", entry.target);
+  //         // stop observing elements already shown
+  //         if (entry.isIntersecting) this.unobserve(entry.target);
+  //       });
+  //     },
+  //     {
+  //       rootMargin: "250px",
+  //     }
+  //   );
+  // }, []); // do this only once, on mount
+
+  const showElements = (els) => {
+    if (!elementObserver.current) return;
+    els.forEach((el) => elementObserver.current.observe(el));
+  };
 
   const elementEffect = (el, visible, setVisible) => {
     if (visible) return;
@@ -104,8 +141,8 @@ export default function StateProvider({ children }) {
   const menuList = [
     "About",
     "Projects",
-    "Services",
     "Voice",
+    "Services",
     "Payment",
     "Contact",
   ];
@@ -206,12 +243,13 @@ export default function StateProvider({ children }) {
     {
       name: "株式会社JampRock",
       src: "/images/client.jpg",
-      link: "https://machi-digi.com/",
+      link: "https://www.jamp-rock.com/",
       des: "いつもとても早くいいものを作って頂いております！ 今後も色々お頼みできればと思っています！",
     },
   ];
 
   const values = {
+    showElements,
     elementEffect,
     menuColorDetect,
     svgList,

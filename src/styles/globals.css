@@ -19,6 +19,10 @@
     @apply mt-32 px-7 xl:max-w-screen-xl xl:mx-auto;
   }
 
+  section > h2 {
+    @apply font-sans font-black;
+  }
+
   h2 {
     @apply text-center font-black text-3xl xl:text-4xl 2xl:text-5xl text-[#162447];
   }
@@ -37,11 +41,20 @@
 
   .card {
     /* clay.cssのプロパティを上書き */
-    --clay-background: #402f81e3;
-    --clay-border-radius: 24px;
+    --clay-background: #162447db;
+    --clay-border-radius: 12px;
 
     /* 拡張スタイル */
     color: #eee;
     padding: 32px 0px;
   }
+}
+
+.entry {
+  transform: translateY(80px);
+  transition: all 500ms;
+}
+.show {
+  opacity: 1;
+  transform: translate(0);
 }

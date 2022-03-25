@@ -19,10 +19,7 @@ export default function Home() {
         <Head>
           <title>Sun Higuchi ~Web制作・開発~</title>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
-          <meta
-            name="description"
-            content="Sun Higuchi's Web Page by next js"
-          />
+          <meta name="description" content="Sun Higuchi's WebSite" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -50,8 +47,8 @@ export default function Home() {
           <Nav />
           <About />
           <Projects />
-          <Services />
           <Voice />
+          <Services />
           <Payment />
         </Layout>
         <Contact />

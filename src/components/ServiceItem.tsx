@@ -74,7 +74,7 @@ function ServiceItem({ title, src, des, anim, num }) {
           height={360}
           objectFit="cover"
           src={src}
-          className="w-full h-full rounded-2xl"
+          className="w-full h-full rounded-lg"
         />
       </div>
 
