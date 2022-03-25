@@ -16,8 +16,8 @@ function About() {
 
   useEffect(() => {
     const observeElements = Array.from(document.querySelectorAll(".entry"));
-    showElements([observeElements]);
     registerEventListeners();
+    showElements([observeElements]);
   }, []);
 
   const registerEventListeners = () => {
@@ -50,7 +50,7 @@ function About() {
         ref={elRef1}
         className={`entry about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
           visible && "opacity-100 !left-0 xl:!left-1/2"
-        }`}
+        } -mt-20 xl:!mt-0`}
       >
         <p className="max-w-full leading-7 xl:leading-relaxed">
           ご覧頂きありがとうございます。大学生エンジニアとしてウェブ開発、ウェブ制作活動を行っています、樋口賛と申します。
