@@ -11,6 +11,7 @@ import TopDesign from "../components/TopDesign";
 import Layout from "../components/Layout";
 import StateProvider from "../provider/StateProvider";
 import LoadingAnim from "../assets/LoadingAnim";
+import Introduction from "../components/Introduction";
 
 export default function Home() {
   return (
@@ -45,9 +46,10 @@ export default function Home() {
         <TopDesign />
         <Layout>
           <Nav />
+          <Introduction />
           <About />
-          <Projects />
           <Voice />
+          <Projects />
           <Services />
           <Payment />
         </Layout>

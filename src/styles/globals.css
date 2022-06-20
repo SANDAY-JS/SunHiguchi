@@ -20,7 +20,7 @@
   }
 
   section > h2 {
-    @apply font-sans font-black;
+    @apply font-sans font-black text-5xl sm:text-6xl text-[transparent] bg-clip-text bg-gradient-to-r from-[#653ea9] to-mainP;
   }
 
   h2 {
@@ -29,7 +29,6 @@
 
   h2 ~ p {
     @apply text-mainB text-xl xl:text-2xl font-extrabold mb-5;
-    /* @apply text-mainB text-xl font-extrabold mb-5; */
   }
 
   p {
@@ -57,4 +56,72 @@
 .show {
   opacity: 1;
   transform: translate(0);
+}
+
+.bubble {
+  width: min(400px, 60%);
+}
+.bubble p {
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+  mix-blend-mode: multiply;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #162447;
+  font-weight: 800;
+  background: #fff;
+  border-radius: 11px;
+  position: relative;
+  box-shadow: 20px 20px inherit;
+  border: 1px solid #162447;
+}
+.bubble p:after {
+  content: ".";
+  transform: translatey(0px);
+  animation: float2 5s ease-in-out infinite;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.08px #162447;
+  border: 1px solid #162447;
+  text-align: left;
+  font-size: 44px;
+  width: 36px;
+  height: 11px;
+  line-height: 30px;
+  border-radius: 11px;
+  background: transparent;
+  position: absolute;
+  display: block;
+  bottom: -22px;
+  left: 0;
+  z-index: -2;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    line-height: 12px;
+    transform: translatey(0px);
+  }
+  55% {
+    transform: translatey(-8px);
+  }
+  60% {
+    line-height: 10px;
+  }
+  100% {
+    line-height: 12px;
+    transform: translatey(0px);
+  }
 }
