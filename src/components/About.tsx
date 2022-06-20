@@ -56,10 +56,7 @@ function About() {
           ご覧頂きありがとうございます。大学生エンジニアとしてウェブ開発、ウェブ制作活動を行っています、樋口賛と申します。
         </p>
         <p className="max-w-full leading-7 xl:leading-relaxed">
-          ウェブ開発やウェブ制作を始めた様々な業務を受け付けております。
-        </p>
-        <p className="max-w-full leading-7 xl:leading-relaxed">
-          下記に可能な業務内容などを記載しておりますので、ご覧いただけますと幸いです。
+          ホームページ制作やフロントエンド開発など、<span className="underline">これまで100件以上の業務に携わった経験がございます。</span>
         </p>
       </div>
       <div
