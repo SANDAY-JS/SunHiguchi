@@ -48,8 +48,8 @@ export default function Home() {
           <Nav />
           <Introduction />
           <About />
-          <Projects />
           <Voice />
+          <Projects />
           <Services />
           <Payment />
         </Layout>
