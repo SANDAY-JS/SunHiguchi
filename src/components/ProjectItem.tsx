@@ -61,7 +61,7 @@ function ProjectItem({ title, languages, src, link, description, index }) {
               className="group flex items-center px-3 py-2 italic text-[#eee] bg-mainB hover:bg-mainP"
             >
               <span className="transform transition-all duration-500 group-hover:-translate-x-2">
-                View It Here
+                Jump to Page
               </span>
               <BiLinkExternal className="opacity-0 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2" />
             </a>
