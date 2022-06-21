@@ -140,8 +140,8 @@ export default function StateProvider({ children }) {
   ];
   const menuList = [
     "About",
-    "Projects",
     "Voice",
+    "Projects",
     "Services",
     "Payment",
     "Contact",
