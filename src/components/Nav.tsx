@@ -77,9 +77,9 @@ function Nav() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                >
-                  <a onClick={handleMenuActive}>{menu}</a>
-                </Link>
+                  onClick={handleMenuActive}>
+                    {menu}
+                  </Link>
               </li>
             ))}
           </ul>
@@ -87,25 +87,10 @@ function Nav() {
 
         {/* Toggle Button */}
         {!isPageWide && (
-          <ul
-            className="fixed top-5 right-5 w-8 h-6 cursor-pointer"
-            onClick={() => setIsMenuActive(!isMenuActive)}
-          >
-            <li
-              className={`${MENU_LINES_BASE_CSS} ${
-                isMenuActive ? "rotate-405 top-2 mt-0.5" : "top-0"
-              } `}
-            ></li>
-            <li
-              className={`${MENU_LINES_BASE_CSS} ${
-                isMenuActive && "opacity-0"
-              } top-1/2 transform -translate-y-1/2`}
-            ></li>
-            <li
-              className={`${MENU_LINES_BASE_CSS} ${
-                isMenuActive ? "-rotate-405 bottom-2 mb-0.5" : "bottom-0"
-              }  `}
-            ></li>
+          <ul className="fixed top-5 right-5 w-8 h-6 cursor-pointer" onClick={() => setIsMenuActive(!isMenuActive)}>
+            <li className={`${MENU_LINES_BASE_CSS} ${isMenuActive ? "rotate-405 top-2 mt-0.5" : "top-0"}`}/>
+            <li className={`${MENU_LINES_BASE_CSS} ${isMenuActive && "opacity-0"} top-1/2 transform -translate-y-1/2`}/>
+            <li className={`${MENU_LINES_BASE_CSS} ${isMenuActive ? "-rotate-405 bottom-2 mb-0.5" : "bottom-0"}`}/>
           </ul>
         )}
       </nav>

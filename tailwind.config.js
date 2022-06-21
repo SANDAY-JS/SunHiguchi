@@ -14,6 +14,7 @@ module.exports = {
     fontFamily: {
       sans: "Poppins, sans-serif",
       jp: "Kosugi Maru, sans-serif",
+      serif: 'serif'
     },
     fill: {
       svgColor: "#fff",

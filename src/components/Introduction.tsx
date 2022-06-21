@@ -7,7 +7,7 @@ const Introduction = () => {
         <div className="flex flex-col items-center">
             <div className="flex flex-col sm:flex-row justify-center sm:items-center flex-wrap gap-12 px-10 py-10">
                 <div className='bubble'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>ホームページを新しくすべきか悩んでいる</p></div>
-                <div className='bubble -mt-8 sm:mt-0 self-end'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>サイトに機能をつけたい!けどどうしたらいいか分からない</p></div>
+                <div className='bubble -mt-8 sm:mt-0 self-end'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>サイトに機能をつけたいけど、どうしたらいいか分からない</p></div>
                 <div className='bubble -mt-2'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>できるだけ費用を抑えたい</p></div>
             </div>
             <div className="relative -mt-16 sm:-mt-8 w-52 h-52 sm:w-[320px] sm:h-[320px]">

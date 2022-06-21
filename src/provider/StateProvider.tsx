@@ -207,24 +207,24 @@ export default function StateProvider({ children }) {
   ];
   const servicesList = [
     {
-      title: "Web開発",
+      title: "ホームページ制作",
+      src: "/images/web-production.webp",
+      des: "安価かつスピーディーにWebサイトを制作させていただきます。SEO対策やユーザビリティを意識したWebサイト制作を意識します。",
+    },
+    {
+      title: "Webシステム開発",
       src: "/images/web-development.webp",
-      des: "Web上のシステム開発を承っております。IT企業でのアジャイル開発経験がございます。ReactやNext.js, TypeScriptなどフロントエンドの業務範囲を専門としております。一部Firebase等を用いたバックエンドの業務も対応可能です。",
+      des: "IT企業でのアジャイル開発経験がございます。React,Next.js,TypeScriptなどフロントエンドを専門としております。",
     },
     {
       title: "アニメーション制作",
       src: "/images/animation.webp",
-      des: "アニメーション制作も承っております。アニメーションのチーム開発経験を活かし、gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
+      des: "Web技術を生かしたアニメーションの実務開発経験を活かし、gsapやanime.jsなどを利用した様々なアニメーションをご希望通りに作成いたします。営業利益の増大に繋がる動画広告も作成いたします。",
     },
     {
       title: "WordPress開発",
       src: "/images/wordpress.webp",
-      des: "Wordpressの案件も受け付けております。デザインのカスタマイズから開発の案件まで対応致します。私自身WordPressサイトを運営しておりますので、ぜひお気軽にご相談ください。",
-    },
-    {
-      title: "Web制作",
-      src: "/images/web-production.webp",
-      des: "ユーザビリティを意識したWebサイトを制作させていただきます。コーディングからCMS導入までお受けしております。ただコードを書くだけでなく、SEO対策や読みやすさを意識したコーディングを致します。スマートフォンサイトの制作もお任せください。",
+      des: "ワードプレスを利用したブログサイトの開発を致します。デザインのカスタマイズから機能追加の案件まで対応致します。",
     },
   ];
   const voiceList = [
