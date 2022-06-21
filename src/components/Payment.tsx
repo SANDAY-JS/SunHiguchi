@@ -8,7 +8,19 @@ function Payment() {
       <p>料金</p>
       <div className="flex flex-col items-center gap-5 2xl:max-w-screen-xl 2xl:mx-auto z-10">
         <PaymentItem
-          title={"Web開発"}
+          title={"ホームページ制作"}
+          matter1={"Webページ / LP制作"}
+          payment1={"69,000"}
+          payment1Des={
+            "（通常料金：¥59,000 + レスポンシブ化：¥10,000）＊参考サイト・デザインをご提示ください"
+          }
+          matter2={null}
+          payment2={null}
+          payment2Des={null}
+          num={false}
+        />
+        <PaymentItem
+          title={"Webシステム開発"}
           matter1={"フロントエンド開発"}
           payment1={"39,000"}
           payment1Des={""}
@@ -28,7 +40,7 @@ function Payment() {
           num={false}
         />
         <PaymentItem
-          title={"WordPress関連"}
+          title={"WordPress開発"}
           matter1={"デザイン, フロントエンド開発"}
           payment1={"39,000"}
           payment1Des={""}
@@ -36,18 +48,6 @@ function Payment() {
           payment2={null}
           payment2Des={null}
           num={true}
-        />
-        <PaymentItem
-          title={"Web制作"}
-          matter1={"Webページ / LP制作"}
-          payment1={"69,000"}
-          payment1Des={
-            "（通常料金：¥59,000 + レスポンシブ化：¥10,000）＊参考サイト・デザインをご提示ください"
-          }
-          matter2={null}
-          payment2={null}
-          payment2Des={null}
-          num={false}
         />
       </div>
     </section>
