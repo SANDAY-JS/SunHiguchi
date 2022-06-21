@@ -1,14 +1,38 @@
-import React, { useContext } from "react";
+import gsap from "gsap";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
 import ServiceItem from "./ServiceItem";
 
 function Services() {
-  const { servicesList } = useContext(MenuListProvider);
+  const { servicesList,elementEffect } = useContext(MenuListProvider);
+
+  const [visible, setVisible] = useState(false);
+  const elRef = useRef();
+
+  const tl = gsap.timeline({})
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      elementEffect(elRef.current, visible, setVisible, true)
+    );
+    return () =>
+      window.removeEventListener("scroll", () =>
+        elementEffect(elRef.current, visible, setVisible, true)
+      );
+  }, []);
+
+  useEffect(() =>{
+    if(!visible) {
+      tl.to('body', {background: '#eee'})
+      return;
+    };
+    tl.to('body', {background: 'linear-gradient(to right, #2C5364, #203A43, #0F2027)'})
+  }, [visible])
 
   return (
-    <section>
+    <section ref={elRef}>
       <h2 id="to_services">Services</h2>
-      <p>対応内容</p>
+      <p className="text-[#ddd]">対応内容</p>
       <div className="flex flex-col items-center xl:max-w-screen-xl xl:mx-auto gap-8 lg:gap-10 xl:gap-12">
         {servicesList.map((service, i) => (
           <ServiceItem

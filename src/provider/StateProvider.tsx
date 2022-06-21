@@ -24,54 +24,31 @@ export default function StateProvider({ children }) {
   const elementObserver = useRef(null);
   const imageObserver = useRef(null);
 
-  // useEffect(() => {
-  //   console.log("in effect");
-  //   elementObserver.current = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         entry.target.classList.toggle("show", entry.isIntersecting);
-  //         // stop observing elements already shown
-  //         if (entry.isIntersecting) this.unobserve(entry.target);
-  //       });
-  //     },
-  //     {
-  //       threshold: 1,
-  //     }
-  //   );
-
-  //   imageObserver.current = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         console.log("loading the image>>>", entry.target);
-  //         // stop observing elements already shown
-  //         if (entry.isIntersecting) this.unobserve(entry.target);
-  //       });
-  //     },
-  //     {
-  //       rootMargin: "250px",
-  //     }
-  //   );
-  // }, []); // do this only once, on mount
-
   const showElements = (els) => {
     if (!elementObserver.current) return;
     els.forEach((el) => elementObserver.current.observe(el));
   };
 
-  const elementEffect = (el, visible, setVisible) => {
-    if (visible) return;
+  const elementEffect = (el, visible, setVisible, effectSeveralTimes) => {
+    if (visible && !effectSeveralTimes) return;
     let el_height = el.offsetHeight;
     let offsetY = el.getBoundingClientRect().top;
     let screenHeight = window.outerHeight;
     let el_position = offsetY - screenHeight + 300;
 
-    return addClassToEl(el_height, screenHeight, el_position, setVisible);
+    return addEffectToEl(el_height, screenHeight, el_position, setVisible, effectSeveralTimes);
   };
 
-  const addClassToEl = (el_height, screenHeight, el_position, setVisible) => {
-    if (-screenHeight <= el_position + el_height && el_position < 0) {
+  const addEffectToEl = (el_height, screenHeight, el_position, setVisible, effectSeveralTimes) => {
+    if(!effectSeveralTimes) {
+      if (-screenHeight >= el_position + el_height || el_position >= 0) return;
       return setVisible(true);
     }
+
+    if(-screenHeight <= el_position + (el_height-500) && el_position < 0 && el_position > -1700){
+      return setVisible(true);
+    }
+    return setVisible(false)
   };
 
   const menuColorDetect = (el, type) => {

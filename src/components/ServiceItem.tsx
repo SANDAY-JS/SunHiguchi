@@ -77,7 +77,7 @@ function ServiceItem({ title, src, des, anim, num }) {
       </div>
 
       <div className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
-        <p className="max-w-md leading-normal text-center font-serif font-bold">{des}</p>
+        <p className="max-w-md leading-normal text-center font-serif font-bold text-[#ddd]">{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
