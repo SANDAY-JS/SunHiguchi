@@ -238,13 +238,13 @@ export default function StateProvider({ children }) {
       name: "株式会社Metamon",
       src: "/images/client.jpg",
       link: "http://www.metamon.co.jp/",
-      des: "すごくレスポンスが早く、しっかりと出来ることと出来ないことを言ってくれるので大変助かっています。",
+      des: "すごくレスポンスが早く、しっかりと出来ることを言ってくれるので大変助かっています。",
     },
     {
       name: "株式会社JampRock",
       src: "/images/client.jpg",
       link: "https://www.jamp-rock.com/",
-      des: "いつもとても早くいいものを作って頂いております！ 今後も色々お頼みできればと思っています！",
+      des: "いつもとても早くいいものを作って頂いております。今後も色々お頼みできればと思っています。",
     },
   ];
 
