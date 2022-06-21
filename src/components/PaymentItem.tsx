@@ -1,21 +1,14 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
 
-function PaymentItem({
-  title,
-  matter1,
-  matter2,
-  payment1,
-  payment1Des,
-  payment2,
-  payment2Des,
-  num,
-}) {
+function PaymentItem({title,matter1,matter2,payment1,payment2,index}) {
   const { elementEffect } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
 
   const [isPageWide, setIsPageWide] = useState(false);
   const elRef = useRef();
+
+  const colors = ['from-[#50C9C3] to-[#96DEDA] text-mainB', 'from-[#EB3349] to-[#F45C43] text-[#ddd]', 'from-[#4b6cb7] to-[#182848] text-[#ddd]', 'from-[#EDDE5D] to-[#EDDE5D] text-mainB']
 
   const checkDeviceWidth = () => {
     const match = window.matchMedia("(max-width: 769px)");
@@ -51,20 +44,17 @@ function PaymentItem({
   }, [isPageWide]);
 
   return (
-    <div
-      ref={elRef}
-      className={`clay card w-full md:w-4/5 2xl:w-full transition-transform transform scale-0 origin-center duration-500
-      relative left-0 overflow-hidden ${visible && "!scale-100"}`}
-      id={`payment_${title}`}
-    >
+    <div ref={elRef} id={`payment_${title}`}
+      className={`bg-gradient-to-br ${colors[index]} rounded-md py-4 w-full md:w-[45%] 2xl:w-full transition-opacity transform opacity-0 origin-center duration-500
+      relative left-0 overflow-hidden !font-serif ${visible && "!opacity-100"}`}>
       <h3 className="text-2xl font-black text-center">{title}</h3>
-      <table className="w-full border-none bg-opacity-40">
+      <table className="w-full border-none bg-opacity-40 mx-2 md:mx-4 lg:mx-6">
         <thead className="py-4">
           <tr>
-            <th className="w-1/2 border-none text-center underline font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-none underline p-3 text-left sm:py-4">
               ご依頼内容
             </th>
-            <th className="w-1/2 border-collapse text-center underline font-jp p-3 sm:p-4">
+            <th className="w-1/2 border-collapse underline p-3 text-left sm:py-4">
               料金
             </th>
           </tr>
@@ -72,63 +62,23 @@ function PaymentItem({
 
         <tbody>
           <tr>
-            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
+            <td className="w-1/2 border-collapse p-3 sm:py-0">
               {matter1}
             </td>
-            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-              {payment1Des ? (
-                <details className="cursor-pointer">
-                  <summary className="border-none outline-none">
-                    ¥{payment1}～
-                  </summary>
-                  <span className="block text-xs sm:text-base">
-                    {payment1Des}
-                  </span>
-                </details>
-              ) : (
-                <>
-                  ¥{payment1}～
-                  <span className="block text-xs sm:text-base">
-                    {payment1Des}
-                  </span>
-                </>
-              )}
+            <td className="w-1/2 border-collapse text-xl md:text-2xl font-black p-3 sm:py-0">
+              ¥{payment1}～
             </td>
           </tr>
           {matter2 && (
-            <tr>
-              <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
+            <tr className="mt-3">
+              <td className="w-1/2 border-collapse p-3 sm:py-0">
                 {matter2}
               </td>
-              <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-                {payment2Des ? (
-                  <details className="cursor-pointer">
-                    <summary className="border-none outline-none">
-                      ¥{payment2}～
-                    </summary>
-                    <span className="block text-xs sm:text-base">
-                      {payment2Des}
-                    </span>
-                  </details>
-                ) : (
-                  <>
-                    ¥{payment2}～
-                    <span className="block text-xs sm:text-base">
-                      {payment2Des}
-                    </span>
-                  </>
-                )}
+              <td className="w-1/2 border-collapse text-xl md:text-2xl font-black p-3 sm:py-0">
+                ¥{payment2}～
               </td>
             </tr>
           )}
-          <tr>
-            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-              その他のご依頼（柔軟に対応致します）
-            </td>
-            <td className="w-1/2 border-collapse text-center font-jp p-3 sm:p-4">
-              要相談
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
