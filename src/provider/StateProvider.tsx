@@ -1,20 +1,9 @@
-import React, { createContext, useEffect, useRef, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
 import { DiCss3Full, DiSass } from "react-icons/di";
-import {
-  SiSolidity,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiTypescript,
-  SiTailwindcss,
-} from "react-icons/si";
-import {
-  IoLogoJavascript,
-  IoLogoWordpress,
-  IoLogoReact,
-  IoLogoFirebase,
-} from "react-icons/io5";
+import { IoLogoJavascript, IoLogoWordpress, IoLogoReact, IoLogoFirebase } from "react-icons/io5";
+import { SiSolidity, SiNextdotjs, SiNodedotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 
 export const MenuListProvider = createContext(null);
 
