@@ -1,25 +1,13 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuListProvider } from "../provider/StateProvider";
+import useVisibility from "../assets/useVisibility";
 
 function VoiceItem({ name, link, src, des }) {
-  const { elementEffect } = useContext(MenuListProvider);
-  const [visible, setVisible] = useState(false);
-  const elRef = useRef();
-
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef.current, visible, setVisible)
-    );
-    return () =>
-      window.removeEventListener("scroll", () =>
-        elementEffect(elRef.current, visible, setVisible)
-      );
-  }, []);
+  const [isVisible, currentElement] = useVisibility(-200);
 
   return (
-    <div ref={elRef} className={`flex flex-col items-center justify-between gap-3 bg-[#fff] rounded-lg px-8 pt-4 pb-2 w-full max-w-xl lg:flex-1 lg:w-1/4 transition-opacity duration-500 opacity-0 ${visible && "opacity-100"}`}>
+    <div ref={currentElement} className={`flex flex-col items-center justify-between gap-3 bg-[#fff] rounded-lg px-8 pt-4 pb-2 w-full max-w-xl lg:flex-1 lg:w-1/4 transition-opacity duration-500 opacity-0 ${isVisible && "opacity-100"}`}>
       <p className="text-xl text-center">"{des}"</p>
 
       <div className="flex justify-center items-center gap-1">
