@@ -4,7 +4,7 @@ import Link from "next/link";
 import useVisibility from "../assets/useVisibility";
 
 function VoiceItem({ name, link, src, des }) {
-  const [isVisible, currentElement] = useVisibility(-200);
+  const [isVisible, currentElement] = useVisibility();
 
   return (
     <div ref={currentElement} className={`flex flex-col items-center justify-between gap-3 bg-[#fff] rounded-lg px-8 pt-4 pb-2 w-full max-w-xl lg:flex-1 lg:w-1/4 transition-opacity duration-500 opacity-0 ${isVisible && "opacity-100"}`}>

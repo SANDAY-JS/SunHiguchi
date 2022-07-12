@@ -7,7 +7,7 @@ import throttle from "lodash.throttle";
  * @param {number} offset - Number of pixels up to the observable element from the top
  * @param {number} throttleMilliseconds - Throttle observable listener, in ms
  */
-function useVisibility( offset = 0, throttleMilliseconds = 100) {
+function useVisibility( offset = -200, throttleMilliseconds = 100) {
   const [isVisible, setIsVisible] = useState(false);
   const currentElement = useRef();
 
