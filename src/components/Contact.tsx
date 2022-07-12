@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import WaveBottom from "./WaveBottom";
 import { AiFillFacebook } from "react-icons/ai";
-import {
-  FaGithubSquare,
-  FaInstagramSquare,
-  FaTwitterSquare,
-} from "react-icons/fa";
+import { FaGithubSquare, FaInstagramSquare, FaTwitterSquare,} from "react-icons/fa";
 import ContactForm from "./ContactForm";
 import { MenuListProvider } from "../provider/StateProvider";
 
