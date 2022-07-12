@@ -11,33 +11,10 @@ export default function StateProvider({ children }) {
   const [menuColor, setMenuColor] = useState(false);
 
   const elementObserver = useRef(null);
-  const imageObserver = useRef(null);
 
   const showElements = (els) => {
     if (!elementObserver.current) return;
     els.forEach((el) => elementObserver.current.observe(el));
-  };
-
-  const elementEffect = (el, visible, setVisible, effectSeveralTimes) => {
-    if (visible && !effectSeveralTimes) return;
-    let el_height = el.offsetHeight;
-    let offsetY = el.getBoundingClientRect().top;
-    let screenHeight = window.outerHeight;
-    let el_position = offsetY - screenHeight + 300;
-
-    return addEffectToEl(el_height, screenHeight, el_position, setVisible, effectSeveralTimes);
-  };
-
-  const addEffectToEl = (el_height, screenHeight, el_position, setVisible, effectSeveralTimes) => {
-    if(!effectSeveralTimes) {
-      if (-screenHeight >= el_position + el_height || el_position >= 0) return;
-      return setVisible(true);
-    }
-
-    if(-screenHeight <= el_position + (el_height-500) && el_position < 0 && el_position > -1700){
-      return setVisible(true);
-    }
-    return setVisible(false)
   };
 
   const menuColorDetect = (el, type) => {
@@ -45,30 +22,19 @@ export default function StateProvider({ children }) {
     let offsetY = el.getBoundingClientRect().top;
     let screenHeight = window.outerHeight;
     let el_position = offsetY - screenHeight + 500;
-    if (el_position < -1000 || (type === "contact" && el_position > 500))
-      return;
+    if (el_position < -1000 || (type === "contact" && el_position > 500)) return;
 
-    return handleMenuColor(
-      type,
-      el_height,
-      screenHeight,
-      el_position,
-      setMenuColor
-    );
+    return handleMenuColor( type, el_height, screenHeight, el_position, setMenuColor );
   };
 
-  const handleMenuColor = (
-    type,
-    el_height,
-    screenHeight,
-    el_position,
-    setMenuColor
-  ) => {
+  const handleMenuColor = ( type, el_height, screenHeight, el_position, setMenuColor ) => {
     if (-screenHeight <= el_position + el_height && el_position < 0) {
       if (type === "about") return setMenuColor(true);
+      if (type === "service") return setMenuColor(false);
       if (type === "contact") return setMenuColor(false);
     }
     if (type === "about") return setMenuColor(false);
+    if (type === "service") return setMenuColor(true);
     if (type === "contact") return setMenuColor(true);
   };
 
@@ -216,7 +182,6 @@ export default function StateProvider({ children }) {
 
   const values = {
     showElements,
-    elementEffect,
     menuColorDetect,
     svgList,
     menuList,
