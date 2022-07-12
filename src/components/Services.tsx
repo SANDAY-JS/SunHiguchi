@@ -5,15 +5,15 @@ import { MenuListProvider } from "../provider/StateProvider";
 import ServiceItem from "./ServiceItem";
 
 function Services() {
-  const refRef = useRef()
+  const menuColorDetectRef = useRef()
   const { servicesList, menuColorDetect } = useContext(MenuListProvider);
   const [isVisible, currentElement] = useVisibility(-400,100,true);
 
   const tl = gsap.timeline({})
 
   useEffect(() => {
-      window.addEventListener("scroll", () => menuColorDetect(refRef.current, "service"));
-      window.removeEventListener("scroll", () => menuColorDetect(refRef.current, "service"));
+      window.addEventListener("scroll", () => menuColorDetect(menuColorDetectRef.current, "service"));
+      window.removeEventListener("scroll", () => menuColorDetect(menuColorDetectRef.current, "service"));
   }, [])
 
   useEffect(() =>{
@@ -26,7 +26,7 @@ function Services() {
 
   return (
     <section ref={currentElement}>
-      <h2 ref={refRef} id="to_services">Services</h2>
+      <h2 ref={menuColorDetectRef} id="to_services">Services</h2>
       <p className={`${isVisible ?'text-[#ddd]':''}`}>対応内容</p>
       <div className="flex flex-col items-center xl:max-w-screen-xl xl:mx-auto gap-8 lg:gap-10 xl:gap-12">
         {servicesList.map((service, i) => (
