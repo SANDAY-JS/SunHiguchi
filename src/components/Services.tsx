@@ -21,7 +21,7 @@ function Services() {
   return (
     <section ref={currentElement}>
       <h2 id="to_services">Services</h2>
-      <p className="text-[#ddd]">対応内容</p>
+      <p className={`${isVisible ?'text-[#ddd]':''}`}>対応内容</p>
       <div className="flex flex-col items-center xl:max-w-screen-xl xl:mx-auto gap-8 lg:gap-10 xl:gap-12">
         {servicesList.map((service, i) => (
           <ServiceItem
@@ -31,6 +31,7 @@ function Services() {
             anim={i === 1 && true}
             num={i}
             key={i}
+            inWindow={isVisible}
           />
         ))}
       </div>

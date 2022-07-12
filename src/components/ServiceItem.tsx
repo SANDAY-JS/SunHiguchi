@@ -5,7 +5,7 @@ import { MenuListProvider } from "../provider/StateProvider";
 import gsap, { Elastic } from "gsap";
 import useVisibility from "../assets/useVisibility";
 
-function ServiceItem({ title, src, des, anim, num }) {
+function ServiceItem({ title, src, des, anim, num, inWindow }) {
   const { servicesList } = useContext(MenuListProvider);
   const [isVisible, currentElement] = useVisibility();
   const animParentRef = useRef();
@@ -39,20 +39,15 @@ function ServiceItem({ title, src, des, anim, num }) {
           num % 2 !== 0 && "md:order-1 md:justify-end"
         }`}
       >
-        <h4 className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
-            z-10 text-3xl lg:text-5xl text-[#ddd] font-serif font-black text-center whitespace-nowrap">
+        <h4 className={`absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
+            z-10 text-3xl lg:text-5xl font-serif font-black text-center whitespace-nowrap ${inWindow ? 'text-[#ddd]' : ''}`}>
           {!anim
             ? title
             : title
                 .replace(/\s/g, `\u00A0`)
                 .split("")
                 .map((letter, i) => (
-                  <span
-                    ref={animParentRef}
-                    className="inline-block"
-                    id="letter"
-                    key={i}
-                  >
+                  <span ref={animParentRef} className="inline-block" id="letter" key={i}>
                     {letter}
                   </span>
                 ))}
@@ -67,7 +62,7 @@ function ServiceItem({ title, src, des, anim, num }) {
       </div>
 
       <div className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
-        <p className="max-w-md leading-normal text-center font-serif font-bold text-[#ddd]">{des}</p>
+        <p className={`max-w-md leading-normal text-center font-serif font-bold  ${inWindow ? 'text-[#ddd]' : ''}`}>{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
@@ -76,8 +71,8 @@ function ServiceItem({ title, src, des, anim, num }) {
           duration={500}
           className="group cursor-pointer bg-gradient-to-r from-[#653ea9] to-[#f1abfb] md:mt-6 font-extrabold transition-colors duration-500 hover:bg-gradient-to-bl">
           <span
-            className="flex justify-center items-center duration-300 w-max h-full z-10 px-3 py-2 text-xl xl:text-2xl 2xl:text-3xl text-[#ddd] italic
-              group-hover:text-[transparent] group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#ffe224] group-hover:to-[#ddd]">
+            className={`flex justify-center items-center duration-300 w-max h-full z-10 px-3 py-2 text-xl xl:text-2xl 2xl:text-3xl text-[#ddd] italic
+              group-hover:text-[transparent] group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#ffe224] group-hover:to-[#ddd]`}>
             料金を確認する
           </span>
         </Link>
