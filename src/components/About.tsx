@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { MenuListProvider } from "../provider/StateProvider";
+import gsap from "gsap";
 
 function About() {
   const {
@@ -11,8 +12,27 @@ function About() {
   } = useContext(MenuListProvider);
   const [visible, setVisible] = useState(false);
   const aboutSecRef = useRef();
-  const elRef1 = useRef();
-  const elRef2 = useRef();
+  const descriptionRef = useRef();
+  const animateElContainer = useRef();
+  const animateRef = useRef([]);
+
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      elementEffect(animateElContainer.current, visible, setVisible)
+    );
+    return () =>
+      window.removeEventListener("scroll", () =>
+        elementEffect(animateElContainer.current, visible, setVisible)
+      );
+  }, []);
+
+  useEffect(() => {
+    if (!animateRef.current || !visible) return;
+    tl.add('start', .5)
+    .to(animateRef.current, .5, {opacity: 1, stagger: .03, ease: 'linear'}, 'start')
+  }, [visible]);
 
   useEffect(() => {
     const observeElements = Array.from(document.querySelectorAll(".entry"));
@@ -22,16 +42,10 @@ function About() {
 
   const registerEventListeners = () => {
     window.addEventListener("scroll", () =>
-      elementEffect(elRef1.current, visible, setVisible)
+      elementEffect(descriptionRef.current, visible, setVisible)
     );
     window.removeEventListener("scroll", () =>
-      elementEffect(elRef1.current, visible, setVisible)
-    );
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef2.current, visible, setVisible)
-    );
-    window.removeEventListener("scroll", () =>
-      elementEffect(elRef2.current, visible, setVisible)
+      elementEffect(descriptionRef.current, visible, setVisible)
     );
     window.addEventListener("scroll", () =>
       menuColorDetect(aboutSecRef.current, "about")
@@ -47,7 +61,7 @@ function About() {
         About me
       </h2>
       <div
-        ref={elRef1}
+        ref={descriptionRef}
         className={`entry about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
           visible && "opacity-100 !left-0 xl:!left-1/2"
         } -mt-20 xl:!mt-0`}
@@ -60,25 +74,23 @@ function About() {
         </p>
       </div>
       <div
-        ref={elRef2}
-        className={`entry about__skills md:flex md:flex-col md:items-center md:gap-2 transition-all duration-500 opacity-0 ${
-          visible && "opacity-100"
-        } `}
+        className={`entry about__skills md:flex md:flex-col md:items-center md:gap-2`}
       >
         <h3 className="text-[#162447] text-center text-2xl xl:text-3xl">
           My Skills
         </h3>
-        <div className="flex justify-center xl:w-2/3 xl:max-w-screen-lg">
+        <div ref={animateElContainer} className="flex justify-center xl:w-2/3 xl:max-w-screen-lg">
           <ul className="flex flex-wrap justify-center md:justify-start mx-auto">
             {mySkillsList.map((mySkill, i) => (
               <li
-                className="group w-1/3 md:w-1/6 md:max-w-lg flex flex-col items-center gap-1 mt-4"
+                ref={el => {animateRef.current[i] = el}}
+                className={`group w-1/3 md:w-1/6 md:max-w-lg flex flex-col items-center gap-1 mt-4 transition-opacity opacity-0`}
                 key={i}
               >
-                <span className="xl:text-xl text-[#162447] z-10 transform duration-500 group-hover:scale-125">
+                <span className="xl:text-xl text-[#162447] z-10 transform group-hover:scale-125">
                   {mySkill}
                 </span>
-                <div className="text-7xl xl:text-8xl text-mainP transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-360">
+                <div className="text-7xl xl:text-8xl text-mainP transform transition-all group-hover:scale-125 group-hover:rotate-360">
                   {svgList[i]}
                 </div>
               </li>
