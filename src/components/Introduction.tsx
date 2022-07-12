@@ -1,16 +1,9 @@
 import Image from 'next/image';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { MenuListProvider } from '../provider/StateProvider';
+import React from 'react';
+import useVisibility from '../assets/useVisibility';
 
 const Introduction = () => {
-  const elRef = useRef(null)
-  const { elementEffect } = useContext(MenuListProvider);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => elementEffect(elRef.current, visible, setVisible));
-    return () => window.removeEventListener("scroll", () => elementEffect(elRef.current, visible, setVisible));
-  }, [])
+  const [isVisible, currentElement] = useVisibility();
 
   return (
     <div>
@@ -25,9 +18,9 @@ const Introduction = () => {
             </div>
         </div>
 
-        <h3 ref={elRef} className='text-4xl sm:text-4xl text-center mt-10 sm:mt-5 font-black leading-normal'>
+        <h3 ref={currentElement} className='text-4xl sm:text-4xl text-center mt-10 sm:mt-5 font-black leading-normal'>
             そんなお悩みを
-            <span className={`block sm:inline text-5xl sm:text-6xl transform transition-opacity duration-500 opacity-0  ${visible && 'opacity-100 text-[transparent] bg-clip-text bg-gradient-to-r from-[#653ea9] to-[#f1abfb]'}`}>素早く解決</span>
+            <span className={`block sm:inline text-5xl sm:text-6xl transform transition-opacity duration-500 opacity-0  ${isVisible && 'opacity-100 text-[transparent] bg-clip-text bg-gradient-to-r from-[#653ea9] to-[#f1abfb]'}`}>素早く解決</span>
             します！
         </h3>
     </div>

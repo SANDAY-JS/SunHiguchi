@@ -1,38 +1,27 @@
 import gsap from "gsap";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect } from "react";
+import useVisibility from "../assets/useVisibility";
 import { MenuListProvider } from "../provider/StateProvider";
 import ServiceItem from "./ServiceItem";
 
 function Services() {
-  const { servicesList,elementEffect } = useContext(MenuListProvider);
-
-  const [visible, setVisible] = useState(false);
-  const elRef = useRef();
+  const { servicesList } = useContext(MenuListProvider);
+  const [isVisible, currentElement] = useVisibility(-400,100,true);
 
   const tl = gsap.timeline({})
 
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef.current, visible, setVisible, true)
-    );
-    return () =>
-      window.removeEventListener("scroll", () =>
-        elementEffect(elRef.current, visible, setVisible, true)
-      );
-  }, []);
-
   useEffect(() =>{
-    if(!visible) {
+    if(!isVisible) {
       tl.to('body', {background: '#eee'})
       return;
     };
     tl.to('body', {background: 'linear-gradient(to right, #2C5364, #203A43, #0F2027)'})
-  }, [visible])
+  }, [isVisible])
 
   return (
-    <section ref={elRef}>
+    <section ref={currentElement}>
       <h2 id="to_services">Services</h2>
-      <p className="text-[#ddd]">対応内容</p>
+      <p className={`${isVisible ?'text-[#ddd]':''}`}>対応内容</p>
       <div className="flex flex-col items-center xl:max-w-screen-xl xl:mx-auto gap-8 lg:gap-10 xl:gap-12">
         {servicesList.map((service, i) => (
           <ServiceItem
@@ -42,6 +31,7 @@ function Services() {
             anim={i === 1 && true}
             num={i}
             key={i}
+            inWindow={isVisible}
           />
         ))}
       </div>

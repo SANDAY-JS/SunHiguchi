@@ -1,30 +1,18 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React from 'react';
 import Image from "next/image";
-import { MenuListProvider } from "../provider/StateProvider";
 import { BiLinkExternal } from "react-icons/bi";
+import useVisibility from "../assets/useVisibility";
 
 function ProjectItem({ title, languages, src, link, description, index }) {
-  const { elementEffect, languageElements } = useContext(MenuListProvider);
-  const [visible, setVisible] = useState(false);
-  const elRef = useRef();
+  const [isVisible, currentElement] = useVisibility()
 
   const isEvenNumber = index % 2 !== 0;
 
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef.current, visible, setVisible)
-    );
-    return () =>
-      window.removeEventListener("scroll", () =>
-        elementEffect(elRef.current, visible, setVisible)
-      );
-  }, []);
-
   return (
     <div
-      ref={elRef}
+      ref={currentElement}
       className={`w-full max-w-full overflow-hidden transform transition-all duration-1000 translate-y-100 opacity-0 ${
-        visible && "opacity-100 translate-y-0"
+        isVisible && "opacity-100 translate-y-0"
       }`}
     >
       <div

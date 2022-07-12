@@ -7,5 +7,5 @@
       "node": true
     }
   }, "@babel/preset-flow"],
-    "@babel/preset-react", "@babel/preset-modules"]
+    "@babel/preset-react", "@babel/preset-modules", "next/babel"]
 }
