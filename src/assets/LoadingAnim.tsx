@@ -1,6 +1,9 @@
 import React from "react";
 
 function LoadingAnim() {
+  if(process.env.NODE_ENV !== "production") {
+    return <></>
+  }
   return (
     <>
       <div className="loading-animation">
