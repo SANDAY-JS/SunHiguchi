@@ -7,21 +7,23 @@ import throttle from "lodash.throttle";
  * @param {number} offset - Number of pixels up to the observable element from the top
  * @param {number} throttleMilliseconds - Throttle observable listener, in ms
  */
-function useVisibility( offset = -200, throttleMilliseconds = 100) {
+function useVisibility( offset = -200, throttleMilliseconds = 100, afterEffect = false) {
   const [isVisible, setIsVisible] = useState(false);
   const currentElement = useRef();
+  const topMinusOffset = afterEffect ? -1200 : 0;
 
   const handleScroll = throttle(() => {
     if (!currentElement.current) {
+      console.log('out of question')
       setIsVisible(false);
       return;
     }
     const top = currentElement.current.getBoundingClientRect().top;
-    setIsVisible(top + offset >= 0 && top - offset <= window.innerHeight);
+    setIsVisible(top + offset >= topMinusOffset && top - offset <= window.innerHeight);
   }, throttleMilliseconds);
 
   useEffect(() => {
-    if(isVisible) return;
+    if(!afterEffect && isVisible) return;
     document.addEventListener('scroll', handleScroll, true);
     return () => document.removeEventListener('scroll', handleScroll, true);
   });
