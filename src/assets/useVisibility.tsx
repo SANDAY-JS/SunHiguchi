@@ -7,9 +7,9 @@ import throttle from "lodash.throttle";
  * @param {number} offset - Number of pixels up to the observable element from the top
  * @param {number} throttleMilliseconds - Throttle observable listener, in ms
  */
-function useVisibility( offset = -200, throttleMilliseconds = 100, afterEffect = false) {
+function useVisibility<Element extends HTMLElement>( offset = -200, throttleMilliseconds = 100, afterEffect = false): [Boolean, React.LegacyRef<HTMLDivElement>] {
   const [isVisible, setIsVisible] = useState(false);
-  const currentElement = useRef();
+  const currentElement = useRef<HTMLDivElement>();
   const topMinusOffset = afterEffect ? -1200 : 0;
 
   const handleScroll = throttle(() => {
