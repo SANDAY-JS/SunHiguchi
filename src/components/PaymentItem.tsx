@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useVisibility from "../assets/useVisibility";
 
 function PaymentItem({title,matter1,matter2,payment1,payment2,index}) {
