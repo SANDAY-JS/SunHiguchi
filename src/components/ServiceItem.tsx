@@ -1,31 +1,21 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { MenuListProvider } from "../provider/StateProvider";
 import gsap, { Elastic } from "gsap";
+import useVisibility from "../assets/useVisibility";
 
 function ServiceItem({ title, src, des, anim, num }) {
-  const { elementEffect, servicesList } = useContext(MenuListProvider);
-  const [visible, setVisible] = useState(false);
-  const elRef = useRef();
+  const { servicesList } = useContext(MenuListProvider);
+  const [isVisible, currentElement] = useVisibility();
   const animParentRef = useRef();
 
   const tl = gsap.timeline({});
   const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
 
   useEffect(() => {
-    window.addEventListener("scroll", () =>
-      elementEffect(elRef.current, visible, setVisible)
-    );
-    return () =>
-      window.removeEventListener("scroll", () =>
-        elementEffect(elRef.current, visible, setVisible)
-      );
-  }, []);
-
-  useEffect(() => {
-    if (!elRef.current || !animParentRef.current) return;
-    const q = gsap.utils.selector(elRef);
+    if (!currentElement.current || !animParentRef.current) return;
+    const q = gsap.utils.selector(currentElement);
 
     tl.set(q("#letter"), { y: "1.2em" })
       .addLabel("text-start", "+=.5")
@@ -34,15 +24,15 @@ function ServiceItem({ title, src, des, anim, num }) {
         { y: 0, stagger: 0.07, ease: letterAnimEasing },
         "text-start"
       );
-  }, [visible]);
+  }, [isVisible]);
 
   return (
     <div
-      ref={elRef}
+      ref={currentElement}
       className={`flex flex-col md:flex-row justify-between items-center flex-wrap gap-5 md:gap-0 xl:w-full
       transition-all duration-500 opacity-0 relative  ${
         num % 2 === 0 ? "-left-invisible" : "left-invisible"
-      } ${visible && "!left-0 opacity-100"}`}
+      } ${isVisible && "!left-0 opacity-100"}`}
     >
       <div
         className={`relative w-full md:w-1/2 h-full flex flex-wrap justify-center md:justify-start ${
