@@ -31,7 +31,7 @@ function TopDesign() {
 
         <div className="absolute transform -translate-x-1/2 left-1/2 bottom-5 2xl:bottom-8 cursor-pointer">
           <Link
-            to="to_about"
+            to="to_introduction"
             spy={true}
             smooth={true}
             offset={-70}
