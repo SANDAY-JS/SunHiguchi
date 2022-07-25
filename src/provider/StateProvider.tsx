@@ -103,6 +103,7 @@ export default function StateProvider({ children }) {
         languageElements.next,
         languageElements.typescript,
         languageElements.tailwindcss,
+        languageElements.sql,
       ],
       src: "/images/reddit-clone.png",
       link: {
