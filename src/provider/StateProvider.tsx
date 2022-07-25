@@ -1,6 +1,7 @@
 import React, { createContext, useRef, useState } from "react";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
+import { GrMysql } from "react-icons/gr";
 import { DiCss3Full, DiSass } from "react-icons/di";
 import { IoLogoJavascript, IoLogoWordpress, IoLogoReact, IoLogoFirebase } from "react-icons/io5";
 import { SiSolidity, SiNextdotjs, SiNodedotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
@@ -49,6 +50,7 @@ export default function StateProvider({ children }) {
     solidity: <SiSolidity />,
     scss: <DiSass />,
     tailwindcss: <SiTailwindcss />,
+    sql: <GrMysql />,
     firebase: <IoLogoFirebase />,
     wordpress: <IoLogoWordpress />,
     git: <BiGitMerge />,
@@ -96,19 +98,20 @@ export default function StateProvider({ children }) {
   ];
   const projectList = [
     {
-      title: "Amazon Clone",
+      title: "Reddit Clone",
       languages: [
-        languageElements.react,
-        languageElements.firebase,
-        languageElements.css,
+        languageElements.next,
+        languageElements.typescript,
+        languageElements.tailwindcss,
+        languageElements.sql,
       ],
-      src: "/images/amazon-clone.png",
+      src: "/images/reddit-clone.png",
       link: {
-        project: "https://clone-bc279.web.app/",
-        github: "https://github.com/SANDAY-JS/amazon-clone",
+        project: "https://reddit-ver2.vercel.app/",
+        github: "https://github.com/SANDAY-JS/reddit-like-app",
       },
       description:
-        "Amazonのように商品の購入ができるサイト。サインインや購入履歴の確認、選択した商品の会計まで可能です。",
+        "Redditのように投票システムや投稿システムを備えたSNSアプリ。",
     },
     {
       title: "MCU Shows Order Check",

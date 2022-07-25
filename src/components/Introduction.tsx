@@ -7,7 +7,7 @@ const Introduction = () => {
 
   return (
     <div>
-        <div className="flex flex-col items-center">
+        <div id="to_introduction" className="flex flex-col items-center">
             <div className="flex flex-col sm:flex-row justify-center sm:items-center flex-wrap gap-12 px-10 py-10">
                 <div className='bubble'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>ホームページを新しくすべきか悩んでいる</p></div>
                 <div className='bubble -mt-8 sm:mt-0 self-end'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>サイトに機能をつけたいけど、どうしたらいいか分からない</p></div>
