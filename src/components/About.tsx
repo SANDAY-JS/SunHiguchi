@@ -59,7 +59,7 @@ function About() {
             ドコモハッカソン優勝(2022年度)。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
-            TOEIC 830点以上。
+            TOEIC 835点。
           </p>
         </div>
       </div>
