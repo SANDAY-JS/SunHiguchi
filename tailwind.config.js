@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: "Poppins, sans-serif",
-      jp: "Kosugi Maru, sans-serif",
+      jp: "sans-serif",
       serif: 'serif'
     },
     fill: {

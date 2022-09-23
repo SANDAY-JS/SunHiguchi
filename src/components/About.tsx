@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
+import Image from 'next/image';
 import { MenuListProvider } from "../provider/StateProvider";
 import gsap from "gsap";
 import useVisibility from "../assets/useVisibility";
@@ -38,18 +39,29 @@ function About() {
       <h2 id="to_about" className="mb-5">
         About me
       </h2>
-      <div
-        ref={currentElement}
-        className={`entry about__detail flex flex-col gap-4 mb-8 transition-all duration-500 relative opacity-0 left-invisible md:px-12 lg:mx-auto lg:max-w-screen-md xl:mx-0 2xl:max-w-screen-lg xl:transform xl:-translate-x-1/2 ${
-          isVisible && "opacity-100 !left-0 xl:!left-1/2"
-        } -mt-20 xl:!mt-0`}
-      >
-        <p className="max-w-full leading-7 xl:leading-relaxed">
-          ご覧頂きありがとうございます。大学生エンジニアとしてウェブ開発、ウェブ制作活動を行っています、樋口賛と申します。
-        </p>
-        <p className="max-w-full leading-7 xl:leading-relaxed">
-          ホームページ制作やフロントエンド開発など、<span className="underline">これまで100件以上の業務に携わった経験がございます。</span>
-        </p>
+      <div className="flex flex-col md:flex-row items-center gap-3 w-full mx-auto max-w-3xl">
+        <div className="relative w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60">
+          <Image src={'/images/me.jpeg'} layout={'fill'} objectFit={'cover'} objectPosition={'center center'} className="rounded-full" />
+        </div>
+        <div
+          ref={currentElement}
+          className={`about__detail relative flex-1 flex flex-col gap-4 mb-8 transition-all duration-500 opacity-0 
+            md:px-12 max-w-md md:max-w-none
+          ${isVisible && "opacity-100"}`}
+        >
+          <p className="max-w-full leading-7 xl:leading-relaxed">
+            ご覧頂きありがとうございます。愛知県を中心にエンジニアとして活動している樋口賛(ヒグチサン)と申します。
+          </p>
+          <p className="max-w-full leading-7 xl:leading-relaxed">
+            ホームページ制作やシステム開発など、<span className="font-bold">これまで110件以上の業務に携わって参りました。</span>
+          </p>
+          <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
+            ドコモハッカソン優勝(2022年度)。
+          </p>
+          <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
+            TOEIC 835点。
+          </p>
+        </div>
       </div>
       <div
         className={`entry about__skills md:flex md:flex-col md:items-center md:gap-2`}
