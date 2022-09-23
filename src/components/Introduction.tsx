@@ -14,7 +14,7 @@ const Introduction = () => {
                 <div className='bubble -mt-2'><p className='sm:px-3 sm:py-7 px-2 py-1 leading-normal sm:text-xl text-sm'>できるだけ費用を抑えたい</p></div>
             </div>
             <div className="relative -mt-16 sm:-mt-8 w-52 h-52 sm:w-[320px] sm:h-[320px]">
-                <Image src={'/images/think.png'} layout={'fill'} />
+                <Image src={'/images/think.png'} layout={'fill'} priority />
             </div>
         </div>
 
