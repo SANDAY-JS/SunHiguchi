@@ -32,7 +32,7 @@ function PaymentItem({title,matter1,matter2,payment1,payment2,index}) {
 
   return (
     <div ref={currentElement} id={`payment_${title}`}
-      className={`bg-gradient-to-br ${colors[index]} rounded-md py-4 w-full md:w-[45%] 2xl:w-full transition-opacity transform opacity-0 origin-center duration-500
+      className={`bg-gradient-to-br bg-[rgba(255,255,255,.7)] border border-blue rounded-md py-4 w-full md:w-[45%] 2xl:w-full transition-opacity transform opacity-0 origin-center duration-500
       relative left-0 overflow-hidden !font-serif ${isVisible && "!opacity-100"}`}>
       <h3 className="text-2xl font-black text-center">{title}</h3>
       <table className="w-full border-none bg-opacity-40 mx-2 md:mx-4 lg:mx-6">
