@@ -41,7 +41,7 @@ function About() {
       </h2>
       <div className="flex flex-col md:flex-row items-center gap-3 w-full mx-auto max-w-3xl">
         <div className="relative w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60">
-          <Image src={'/images/me.jpeg'} layout={'fill'} objectFit={'cover'} objectPosition={'center center'} className="rounded-full" />
+          <Image src={'/images/me.jpeg'} layout={'fill'} objectFit={'cover'} objectPosition={'center center'} className="rounded-full contrast-200 brightness-150" />
         </div>
         <div
           ref={currentElement}
