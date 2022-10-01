@@ -1,33 +1,15 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { MenuListProvider } from "../provider/StateProvider";
-import gsap, { Elastic } from "gsap";
 import FadeIn from "../assets/FadeIn";
 
 function ServiceItem({ title, src, des, anim, num, inWindow }) {
   const { servicesList } = useContext(MenuListProvider);
   const animParentRef = useRef();
 
-  const tl = gsap.timeline({});
-  const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
-
-  // useEffect(() => {
-  //   if (!currentElement.current || !animParentRef.current) return;
-  //   const q = gsap.utils.selector(currentElement);
-
-  //   tl.set(q("#letter"), { y: "1.2em" })
-  //     .addLabel("text-start", "+=.5")
-  //     .to(
-  //       q("#letter"),
-  //       { y: 0, stagger: 0.07, ease: letterAnimEasing },
-  //       "text-start"
-  //     );
-  // }, [isVisible]);
-
   return (
     <div
-      // ref={currentElement}
       className={`flex flex-col md:flex-row justify-between items-center flex-wrap gap-5 md:gap-0 xl:w-full relative`}
     >
       <FadeIn
