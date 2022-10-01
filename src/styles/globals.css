@@ -46,6 +46,30 @@
   color: #ddd;
 } */
 
+.fadeInEl {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 50%);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transition-delay: 300ms;
+}
+@media screen and (min-width: 768px) {
+  .fadeInEl {
+    transform: translate(0, 30%);
+  }
+}
+.onlyOpacity {
+  transform: none;
+}
+.durationSlow {
+  transition-duration: 1200ms;
+}
+.fadeIn {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 .entry {
   transform: translateY(80px);
   transition: all 500ms;

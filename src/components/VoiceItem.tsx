@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import useVisibility from "../assets/useVisibility";
+import FadeIn from "../assets/FadeIn";
 
 function VoiceItem({ name, link, src, des }) {
-  const [isVisible, currentElement] = useVisibility();
 
   return (
-    <div ref={currentElement} className={`flex flex-col items-center justify-between gap-3 bg-[#fff] rounded-lg px-8 pt-4 pb-2 w-full max-w-xl lg:flex-1 lg:w-1/4 transition-opacity duration-500 opacity-0 ${isVisible && "opacity-100"}`}>
+    <FadeIn className={`flex flex-col items-center justify-between gap-3 bg-[#fff] rounded-lg px-8 pt-4 pb-2 w-full max-w-xl lg:flex-1 lg:w-1/4`}>
       <p className="text-xl text-center">"{des}"</p>
 
       <div className="flex justify-center items-center gap-1">
@@ -16,7 +15,7 @@ function VoiceItem({ name, link, src, des }) {
           <Link href={link}><a className="underline whitespace-nowrap">{name}様</a></Link>
         </h3>
       </div>
-    </div>
+    </FadeIn>
   );
 }
 

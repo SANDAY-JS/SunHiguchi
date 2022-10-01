@@ -1,46 +1,24 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { MenuListProvider } from "../provider/StateProvider";
-import gsap, { Elastic } from "gsap";
-import useVisibility from "../assets/useVisibility";
+import FadeIn from "../assets/FadeIn";
 
-function ServiceItem({ title, src, des, anim, num, inWindow }) {
+function ServiceItem({ title, src, des, anim, num }) {
   const { servicesList } = useContext(MenuListProvider);
-  const [isVisible, currentElement] = useVisibility();
   const animParentRef = useRef();
-
-  const tl = gsap.timeline({});
-  const letterAnimEasing = Elastic.easeOut.config(1.2, 0.7);
-
-  useEffect(() => {
-    if (!currentElement.current || !animParentRef.current) return;
-    const q = gsap.utils.selector(currentElement);
-
-    tl.set(q("#letter"), { y: "1.2em" })
-      .addLabel("text-start", "+=.5")
-      .to(
-        q("#letter"),
-        { y: 0, stagger: 0.07, ease: letterAnimEasing },
-        "text-start"
-      );
-  }, [isVisible]);
 
   return (
     <div
-      ref={currentElement}
-      className={`flex flex-col md:flex-row justify-between items-center flex-wrap gap-5 md:gap-0 xl:w-full
-      transition-all duration-500 opacity-0 relative  ${
-        num % 2 === 0 ? "-left-invisible" : "left-invisible"
-      } ${isVisible && "!left-0 opacity-100"}`}
+      className={`flex flex-col md:flex-row justify-between items-center flex-wrap gap-5 md:gap-0 xl:w-full relative`}
     >
-      <div
+      <FadeIn
         className={`relative w-full md:w-1/2 h-full flex flex-wrap justify-center md:justify-start ${
           num % 2 !== 0 && "md:order-1 md:justify-end"
         }`}
       >
         <h4 className={`absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
-            z-10 text-3xl lg:text-5xl font-serif font-black text-center whitespace-nowrap ${inWindow ? 'text-[#ddd]' : ''}`}>
+            z-10 text-3xl lg:text-5xl font-serif font-black text-center whitespace-nowrap text-[#ddd]`}>
           {!anim
             ? title
             : title
@@ -59,10 +37,10 @@ function ServiceItem({ title, src, des, anim, num, inWindow }) {
           src={src}
           className="w-full h-full rounded-lg"
         />
-      </div>
+      </FadeIn>
 
-      <div className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
-        <p className={`max-w-md leading-normal text-center font-serif font-bold  ${inWindow ? 'text-[#ddd]' : ''}`}>{des}</p>
+      <FadeIn className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
+        <p className={`max-w-md leading-normal text-center font-serif font-bold`}>{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
@@ -76,7 +54,7 @@ function ServiceItem({ title, src, des, anim, num, inWindow }) {
             料金を確認する
           </span>
         </Link>
-      </div>
+      </FadeIn>
     </div>
   );
 }
