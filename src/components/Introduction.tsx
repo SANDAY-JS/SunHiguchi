@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import useVisibility from '../assets/useVisibility';
+import FadeIn from '../assets/FadeIn';
 
 const Introduction = () => {
-  const [isVisible, currentElement] = useVisibility();
-
   return (
     <div>
         <div id="to_introduction" className="flex flex-col items-center">
@@ -18,9 +16,11 @@ const Introduction = () => {
             </div>
         </div>
 
-        <h3 ref={currentElement} className='text-4xl sm:text-4xl text-center mt-10 sm:mt-5 font-black leading-normal'>
+        <h3 className='text-4xl sm:text-4xl text-center mt-10 sm:mt-5 font-black leading-normal'>
             そんなお悩みを
-            <span className={`block sm:inline text-5xl sm:text-6xl transform transition-opacity duration-500 opacity-0  ${isVisible && 'opacity-100 text-[transparent] bg-clip-text bg-gradient-to-r from-[#653ea9] to-[#f1abfb]'}`}>素早く解決</span>
+            <FadeIn className={`block sm:inline text-5xl sm:text-6xl text-[transparent] bg-clip-text bg-gradient-to-r from-[#653ea9] to-[#f1abfb]`}>
+                <span>素早く解決</span>
+            </FadeIn>
             します！
         </h3>
     </div>
