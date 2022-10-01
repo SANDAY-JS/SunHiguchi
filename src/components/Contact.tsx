@@ -4,6 +4,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FaGithubSquare, FaInstagramSquare, FaTwitterSquare,} from "react-icons/fa";
 import ContactForm from "./ContactForm";
 import { MenuListProvider } from "../provider/StateProvider";
+import FadeIn from "../assets/FadeIn";
 
 function Contact() {
   const { menuColorDetect } = useContext(MenuListProvider);
@@ -28,12 +29,18 @@ function Contact() {
     >
       <WaveBottom />
       <h2 id="to_contact" className="text-[#eee]">
-        Contact
+        <FadeIn>
+          <span>Contact</span>
+        </FadeIn>
       </h2>
-      <p className="text-[#eee] my-5">お問い合わせ</p>
+      <FadeIn>
+        <p className="text-[#eee] my-5 text-center">
+            <span>お問い合わせ</span>
+        </p>
+      </FadeIn>
       <p className="text-mainP">{message}</p>
 
-      <div className="flex flex-col lg:grid lg:grid-flow-col lg:grid-cols-5 lg:gap-4 lg:max-w-xl items-center w-full md:w-2/3 xl:w-1/3 md:mx-auto z-10">
+      <FadeIn onlyOpacity className="flex flex-col lg:grid lg:grid-flow-col lg:grid-cols-5 lg:gap-4 lg:max-w-xl items-center w-full md:w-2/3 xl:w-1/3 md:mx-auto z-10">
         <ul className="w-full lg:w-auto lg:h-full lg:col-span-1 flex lg:flex-col justify-around items-center mb-5 lg:mb-0 py-2 lg:px-2 rounded-lg bg-[#fff]">
           <li>
             <a href="https://github.com/SANDAY-JS" target="_blank">
@@ -61,7 +68,7 @@ function Contact() {
         </ul>
 
         <ContactForm setMessage={setMessage} />
-      </div>
+      </FadeIn>
     </section>
   );
 }
