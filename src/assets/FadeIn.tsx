@@ -3,13 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 type Props = {
     children: JSX.Element[] | JSX.Element;
     className?: string;
+    id?: string;
     onlyOpacity?: boolean;
     slow?: boolean;
     delay?: boolean;
 }
 
 
-const FadeIn = ({ children, className, onlyOpacity, slow, delay }: Props) => {
+const FadeIn = ({ children, className, id, onlyOpacity, slow, delay }: Props) => {
   const domRef = useRef();
   const [isVisible, setVisible] = useState<boolean>(false);
 
@@ -29,6 +30,7 @@ const FadeIn = ({ children, className, onlyOpacity, slow, delay }: Props) => {
     return (
       <div 
         ref={ domRef } 
+        id={id ?? ''}
         className={`fadeInEl ${onlyOpacity ? 'onlyOpacity' : ''} ${delay ? `!delay-1000` : ''} ${slow ? 'durationSlow' : ''} ${className ?? ''} ${isVisible ? 'fadeIn' : ''}`}
       >
         { children }
