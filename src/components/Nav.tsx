@@ -44,9 +44,9 @@ function Nav() {
                 key={menu}
                 className={`cursor-pointer transition-colors duration-300 font-black md:text-xl lg:text-xl 2xl:text-3xl
                  hover:text-[#673ab7] ${
-                   menuColor
-                     ? "text-[#162447] hover:text-[#ddd]"
-                     : "text-[#ddd]"
+                   !menuColor
+                    ? "text-[#ddd]"
+                    : "text-[#162447] hover:text-[#ddd]"
                  }`}
               >
                 <Link
