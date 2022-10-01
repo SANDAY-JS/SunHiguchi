@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import { MenuListProvider } from "../provider/StateProvider";
 import FadeIn from "../assets/FadeIn";
 
-function ServiceItem({ title, src, des, anim, num, inWindow }) {
+function ServiceItem({ title, src, des, anim, num }) {
   const { servicesList } = useContext(MenuListProvider);
   const animParentRef = useRef();
 
@@ -18,7 +18,7 @@ function ServiceItem({ title, src, des, anim, num, inWindow }) {
         }`}
       >
         <h4 className={`absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden
-            z-10 text-3xl lg:text-5xl font-serif font-black text-center whitespace-nowrap ${inWindow ? 'text-[#ddd]' : ''}`}>
+            z-10 text-3xl lg:text-5xl font-serif font-black text-center whitespace-nowrap text-[#ddd]`}>
           {!anim
             ? title
             : title
@@ -40,7 +40,7 @@ function ServiceItem({ title, src, des, anim, num, inWindow }) {
       </FadeIn>
 
       <FadeIn className="flex flex-col items-center gap-4 lg:gap-8 w-full max-w-lg h-full md:w-1/2 px-5">
-        <p className={`max-w-md leading-normal text-center font-serif font-bold  ${inWindow ? 'text-[#ddd]' : ''}`}>{des}</p>
+        <p className={`max-w-md leading-normal text-center font-serif font-bold`}>{des}</p>
         <Link
           to={`payment_${servicesList[num].title}`}
           spy={true}
