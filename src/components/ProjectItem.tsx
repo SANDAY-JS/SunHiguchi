@@ -1,20 +1,13 @@
 import React from 'react';
 import Image from "next/image";
 import { BiLinkExternal } from "react-icons/bi";
-import useVisibility from "../assets/useVisibility";
+import FadeIn from '../assets/FadeIn';
 
 function ProjectItem({ title, languages, src, link, description, index }) {
-  const [isVisible, currentElement] = useVisibility()
-
   const isEvenNumber = index % 2 !== 0;
 
   return (
-    <div
-      ref={currentElement}
-      className={`w-full max-w-full overflow-hidden transform transition-all duration-1000 translate-y-100 opacity-0 ${
-        isVisible && "opacity-100 translate-y-0"
-      }`}
-    >
+    <FadeIn className={`w-full max-w-full overflow-hidden transform transition-all duration-1000 translate-y-100`}>
       <div
         className={`relative flex flex-wrap justify-between w-full overflow-hidden ${
           isEvenNumber && "md:flex-row-reverse"
@@ -79,7 +72,7 @@ function ProjectItem({ title, languages, src, link, description, index }) {
           />
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 }
 
