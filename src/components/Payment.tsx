@@ -10,7 +10,7 @@ function Payment() {
         <PaymentItem
           title={"ホームページ制作"}
           matter1={"Webページ / LP制作"}
-          payment1={"100,000"}
+          payment1={"180,000"}
           matter2={null}
           payment2={null}
           index={0}
@@ -18,7 +18,7 @@ function Payment() {
         <PaymentItem
           title={"Webシステム開発"}
           matter1={"フロントエンド開発"}
-          payment1={"39,000"}
+          payment1={"50,000"}
           matter2={null}
           payment2={null}
           index={1}
@@ -26,7 +26,7 @@ function Payment() {
         <PaymentItem
           title={"アニメーション制作"}
           matter1={"サイト内アニメーション"}
-          payment1={"20,000"}
+          payment1={"30,000"}
           matter2={null}
           payment2={null}
           index={2}
@@ -34,9 +34,9 @@ function Payment() {
         <PaymentItem
           title={"WordPress開発"}
           matter1={"デザインの変更・修正"}
-          payment1={"49,000"}
+          payment1={"50,000"}
           matter2={"機能の追加(システム開発)"}
-          payment2={"39,000"}
+          payment2={"50,000"}
           index={3}
         />
       </div>
