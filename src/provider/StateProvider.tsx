@@ -1,10 +1,10 @@
 import React, { createContext, useRef, useState } from "react";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { BiGitMerge } from "react-icons/bi";
-import { GrMysql } from "react-icons/gr";
+import { GrGraphQl, GrMysql } from "react-icons/gr";
 import { DiCss3Full, DiSass } from "react-icons/di";
 import { IoLogoJavascript, IoLogoWordpress, IoLogoReact, IoLogoFirebase } from "react-icons/io5";
-import { SiSolidity, SiNextdotjs, SiNodedotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { SiSolidity, SiNextdotjs, SiNodedotjs, SiTypescript, SiTailwindcss, SiSupabase } from "react-icons/si";
 
 export const MenuListProvider = createContext(null);
 
@@ -51,6 +51,8 @@ export default function StateProvider({ children }) {
     scss: <DiSass key={'scss'} />,
     tailwindcss: <SiTailwindcss key={'tailwindcss'} />,
     sql: <GrMysql key={'sql'} />,
+    graphql: <GrGraphQl key={'graphql'} />,
+    supabase: <SiSupabase key={'supabase'} />,
     firebase: <IoLogoFirebase key={'firebase'} />,
     wordpress: <IoLogoWordpress key={'wordpress'} />,
     git: <BiGitMerge key={'git'} />,
@@ -67,7 +69,10 @@ export default function StateProvider({ children }) {
     languageElements.solidity,
     languageElements.scss,
     languageElements.tailwindcss,
+    languageElements.sql,
+    languageElements.graphql,
     languageElements.firebase,
+    languageElements.supabase,
     languageElements.wordpress,
     languageElements.git,
     languageElements.github,
@@ -80,6 +85,10 @@ export default function StateProvider({ children }) {
     "Payment",
     "Contact",
   ];
+  const WORK_MENU_LIST = [
+    "Top",
+    "Works",
+  ];
   const mySkillsList = [
     "HTML",
     "CSS",
@@ -91,7 +100,10 @@ export default function StateProvider({ children }) {
     "Solidity",
     "Sass",
     "Tailwind.css",
+    "MySQL",
+    "GraphQL",
     "Firebase",
+    "Supabase",
     "WordPress",
     "Git",
     "Github",
@@ -138,6 +150,108 @@ export default function StateProvider({ children }) {
       },
       description:
         "最新上映作品をジャンル別に確認できるサイト。Huluのデザインをもとに設計し、ページ内のUI向上に務めました。",
+    },
+  ];
+  const ALL_PROJECTS = [
+    {
+      title: "Reddit Clone",
+      languages: [
+        languageElements.next,
+        languageElements.typescript,
+        languageElements.tailwindcss,
+        languageElements.sql,
+      ],
+      src: "/images/reddit-clone.png",
+      link: {
+        project: "https://reddit-ver2.vercel.app/",
+        github: "https://github.com/SANDAY-JS/reddit-like-app",
+      },
+      description:
+        "Redditのように投票システムや投稿システムを備えたSNSアプリ。",
+    },
+    {
+      title: "MCU Shows Order Check",
+      languages: [
+        languageElements.next,
+        languageElements.typescript,
+        languageElements.scss,
+      ],
+      src: "/images/mcu-order-check.png",
+      link: {
+        project: "https://mcu-order-check.vercel.app/",
+        github: "https://github.com/SANDAY-JS/mcu-order-check",
+      },
+      description:
+        "マーベル作品の並べ替え＆フィルター＆検索がワンクリックでできるサイト。",
+    },
+    {
+      title: "AVALANCHE Official Website",
+      languages: [languageElements.next, languageElements.typescript, languageElements.tailwindcss, languageElements.firebase],
+      src: "/images/avalanche.png",
+      link: {
+        project: "https://www.avalancheofficial.com/",
+        github: "https://github.com/SANDAY-JS/avalancheofficial.com",
+      },
+      description:
+        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
+    },
+    {
+      title: "DayStar System Website",
+      languages: [
+        languageElements.next,
+        languageElements.typescript,
+        languageElements.tailwindcss,
+        languageElements.graphql,
+        languageElements.wordpress,
+      ],
+      src: "/images/daystar.png",
+      link: {
+        project: "https://daystar.jp/",
+        github: "https://github.com/SANDAY-JS/daystar",
+      },
+      description:
+        "保有法人のランディングページです。フロントエンドはNext.js / TypeScriptを、バックエンドはGraphQL / StepZenを使用しています。",
+    },
+    {
+      title: "Hulu Clone",
+      languages: [languageElements.next, languageElements.tailwindcss],
+      src: "/images/hulu-clone.png",
+      link: {
+        project: "https://hulu-clone-gray.vercel.app/",
+        github: "https://github.com/SANDAY-JS/hulu-clone",
+      },
+      description:
+      "最新上映作品をジャンル別に確認できるサイト。Huluのデザインをもとに設計し、ページ内のUI向上に務めました。",
+    },
+    {
+      title: "Amazon Clone",
+      languages: [
+        languageElements.react,
+        languageElements.firebase,
+        languageElements.css,
+      ],
+      src: "/images/amazon-clone.png",
+      link: {
+        project: "https://clone-bc279.web.app/",
+        github: "https://github.com/SANDAY-JS/amazon-clone",
+      },
+      description:
+        "Amazonのように商品の購入ができるサイト。サインインや購入履歴の確認、選択した商品の会計まで可能です。",
+    },
+    {
+      title: "Let's Cook App",
+      languages: [
+        languageElements.html,
+        languageElements.css,
+        languageElements.javascript,
+      ],
+      src: "/images/cookpad.png",
+      link: {
+        project: "https://sanday-js.github.io/cookpad-app/",
+        github: "https://github.com/SANDAY-JS/cookpad-app",
+      },
+      description:
+        "食材のレシピを検索できるシンプルなサイト。",
     },
   ];
   const servicesList = [
@@ -188,9 +302,11 @@ export default function StateProvider({ children }) {
     menuColorDetect,
     svgList,
     menuList,
+    WORK_MENU_LIST,
     menuColor,
     voiceList,
     projectList,
+    ALL_PROJECTS,
     servicesList,
     mySkillsList,
   };
