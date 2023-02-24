@@ -75,7 +75,7 @@ export default function StateProvider({ children }) {
   const menuList = [
     "About",
     "Voice",
-    "Projects",
+    "Works",
     "Services",
     "Payment",
     "Contact",
