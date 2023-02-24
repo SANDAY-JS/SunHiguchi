@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from "react";
 import Image from 'next/image';
+import Link from 'next/link'
 import { MenuListProvider } from "../provider/StateProvider";
 import FadeIn from "../assets/FadeIn";
 
@@ -29,7 +30,11 @@ function About() {
             Webアプリ開発を中心に、これまで110件以上の業務に携わって参りました。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
-            2年前にフリーランスエンジニアとして活動開始し、2022年に[DayStarシステム](http://daystar.jp)を創業しました。
+            2年前にフリーランスエンジニアとして活動を開始。2022年に
+            <Link href={"http://daystar.jp"}>
+              <a target="_blank" style={{color: "#4898e8", textDecoration: "underline"}}>DayStarシステム</a>
+            </Link>
+            を創業。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
             実績：ドコモハッカソン優勝(2022年度) | TOEIC 835点(2022年1月) | IELTS 6.5(2023年2月)
