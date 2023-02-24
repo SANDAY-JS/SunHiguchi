@@ -23,16 +23,16 @@ function About() {
             md:px-12 max-w-md md:max-w-none`}
         >
           <p className="max-w-full leading-7 xl:leading-relaxed">
-            ご覧頂きありがとうございます。愛知県を中心にエンジニアとして活動している樋口賛(ヒグチサン)と申します。
+            ご覧頂きありがとうございます。愛知県を中心にWeb開発の受託業務を行なっている樋口賛(ヒグチサン)と申します。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed">
-            ホームページ制作やシステム開発など、<span className="font-bold">これまで110件以上の業務に携わって参りました。</span>
+            Webアプリ開発を中心に、これまで110件以上の業務に携わって参りました。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
-            ドコモハッカソン優勝(2022年度)。
+            2年前にフリーランスエンジニアとして活動開始し、2022年に[DayStarシステム](http://daystar.jp)を創業しました。
           </p>
           <p className="max-w-full leading-7 xl:leading-relaxed font-extrabold">
-            TOEIC 835点。
+            実績：ドコモハッカソン優勝(2022年度) | TOEIC 835点(2022年1月) | IELTS 6.5(2023年2月)
           </p>
         </FadeIn>
       </div>
