@@ -115,7 +115,8 @@ export default function StateProvider({ children }) {
         languageElements.next,
         languageElements.typescript,
         languageElements.tailwindcss,
-        languageElements.sql,
+        languageElements.graphql,
+        languageElements.supabase,
       ],
       src: "/images/reddit-clone.png",
       link: {
@@ -141,15 +142,15 @@ export default function StateProvider({ children }) {
         "マーベル作品の並べ替え＆フィルター＆検索がワンクリックでできるサイト。",
     },
     {
-      title: "Hulu Clone",
-      languages: [languageElements.next, languageElements.tailwindcss],
-      src: "/images/hulu-clone.png",
+      title: "AVALANCHE Official Website",
+      languages: [languageElements.next, languageElements.typescript, languageElements.tailwindcss, languageElements.firebase],
+      src: "/images/avalanche.png",
       link: {
-        project: "https://hulu-clone-gray.vercel.app/",
-        github: "https://github.com/SANDAY-JS/hulu-clone",
+        project: "https://www.avalancheofficial.com/",
+        github: "https://github.com/SANDAY-JS/avalancheofficial.com",
       },
       description:
-        "最新上映作品をジャンル別に確認できるサイト。Huluのデザインをもとに設計し、ページ内のUI向上に務めました。",
+        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
     },
   ];
   const ALL_PROJECTS = [
@@ -159,7 +160,8 @@ export default function StateProvider({ children }) {
         languageElements.next,
         languageElements.typescript,
         languageElements.tailwindcss,
-        languageElements.sql,
+        languageElements.graphql,
+        languageElements.supabase,
       ],
       src: "/images/reddit-clone.png",
       link: {
