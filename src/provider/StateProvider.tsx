@@ -155,6 +155,17 @@ export default function StateProvider({ children }) {
   ];
   const ALL_PROJECTS = [
     {
+      title: "AVALANCHE Official Website",
+      languages: [languageElements.next, languageElements.typescript, languageElements.tailwindcss, languageElements.firebase],
+      src: "/images/avalanche.png",
+      link: {
+        project: "https://www.avalancheofficial.com/",
+        github: "https://github.com/SANDAY-JS/avalancheofficial.com",
+      },
+      description:
+        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
+    },
+    {
       title: "Reddit Clone",
       languages: [
         languageElements.next,
@@ -185,17 +196,6 @@ export default function StateProvider({ children }) {
       },
       description:
         "マーベル作品の並べ替え＆フィルター＆検索がワンクリックでできるサイト。",
-    },
-    {
-      title: "AVALANCHE Official Website",
-      languages: [languageElements.next, languageElements.typescript, languageElements.tailwindcss, languageElements.firebase],
-      src: "/images/avalanche.png",
-      link: {
-        project: "https://www.avalancheofficial.com/",
-        github: "https://github.com/SANDAY-JS/avalancheofficial.com",
-      },
-      description:
-        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
     },
     {
       title: "DayStar System Website",
