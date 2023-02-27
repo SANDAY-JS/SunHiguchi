@@ -8,7 +8,7 @@ function Projects() {
 
   return (
     <section>
-      <h2 id="to_projects">Works</h2>
+      <h2 id="to_works">Works</h2>
       <p>制作実績</p>
       <div className="flex flex-col w-full gap-10 ">
         {projectList.map((project, i) => (
