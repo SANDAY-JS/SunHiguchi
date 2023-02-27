@@ -118,7 +118,7 @@ export default function StateProvider({ children }) {
         github: "https://github.com/SANDAY-JS/avalancheofficial.com",
       },
       description:
-        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
+        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。(Next.js ver.13 使用)",
     },
     {
       title: "Reddit Clone",
