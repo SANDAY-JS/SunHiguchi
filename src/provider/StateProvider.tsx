@@ -118,7 +118,7 @@ export default function StateProvider({ children }) {
         github: "https://github.com/SANDAY-JS/avalancheofficial.com",
       },
       description:
-        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。",
+        "所属バンドのWebサイト。ECサイトや会員登録の機能があります。(Next.js ver.13 使用)",
     },
     {
       title: "Reddit Clone",
@@ -280,6 +280,12 @@ export default function StateProvider({ children }) {
   ];
   const voiceList = [
     {
+      name: "株式会社JampRock",
+      src: "/images/client.jpg",
+      link: "https://www.jamp-rock.com/",
+      des: "いつもとても早くいいものを作って頂いております。今後も色々お頼みできればと思っています。",
+    },
+    {
       name: "マチデジ",
       src: "/images/machi-degi.jpg",
       link: "https://machi-digi.com/",
@@ -290,12 +296,6 @@ export default function StateProvider({ children }) {
       src: "/images/client.jpg",
       link: "http://www.metamon.co.jp/",
       des: "すごくレスポンスが早く、しっかりと出来ることを言ってくれるので大変助かっています。",
-    },
-    {
-      name: "株式会社JampRock",
-      src: "/images/client.jpg",
-      link: "https://www.jamp-rock.com/",
-      des: "いつもとても早くいいものを作って頂いております。今後も色々お頼みできればと思っています。",
     },
   ];
 
