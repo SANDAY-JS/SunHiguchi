@@ -241,6 +241,21 @@ export default function StateProvider({ children }) {
         "Amazonのように商品の購入ができるサイト。サインインや購入履歴の確認、選択した商品の会計まで可能です。",
     },
     {
+      title: "Facebook Clone",
+      languages: [
+        languageElements.next,
+        languageElements.firebase,
+        languageElements.tailwindcss,
+      ],
+      src: "/images/facebook-clone.png",
+      link: {
+        project: "https://clone-bc279.web.app/",
+        github: "https://github.com/SANDAY-JS/amazon-clone",
+      },
+      description:
+        "Facebookを模倣したサイト。シンプルに投稿の機能を試すことができます",
+    },
+    {
       title: "Let's Cook App",
       languages: [
         languageElements.html,
